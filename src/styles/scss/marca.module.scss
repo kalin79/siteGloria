@@ -1,0 +1,49 @@
+@use 'vars/colors' as *;
+
+.titularBoxMain {
+    padding: 1rem 0 1rem;
+
+    h3 {
+        color: $celeste;
+        font-size: 1rem;
+        letter-spacing: .25em;
+    }
+
+    h1 {
+        color: white;
+        font-size: 2rem;
+        letter-spacing: -.025em;
+    }
+}
+
+.listadoCard {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 1.5rem;
+    margin: 1rem 0
+}
+
+.btnMarca {
+    width: 231px;
+    height: 180px;
+    display: block;
+    border: 1px solid rgba($azulgrisaceo, .3);
+    border-radius: 30px;
+    transition: .5s ease-in-out all;
+    padding: 2rem;
+    box-sizing: border-box;
+    background: $azulOscuro;
+    box-shadow: 5px 5px 15px rgba(black, 0.3);
+
+    &:hover {
+        transform: scale(1.05);
+        border: 1px solid white
+    }
+
+    img {
+        width: 100%;
+        object-fit: contain;
+        height: 100%;
+    }
+}

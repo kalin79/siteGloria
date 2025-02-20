@@ -1,0 +1,133 @@
+.bannerCarrusel {
+    width: 100%;
+    height: 65vh;
+    // overflow: hidden;
+
+    .imageFill {
+        object-fit: cover; // Asegura que la imagen cubra el espacio
+    }
+
+}
+
+.infoVideoBox {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+
+    h2 {
+        color: white;
+        font-size: 3.75rem;
+        line-height: .85em;
+
+        @media screen and (min-width: 1200px) {
+            font-size: 4.25rem;
+            line-height: .85em;
+        }
+
+        @media screen and (min-width: 1600px) {
+            font-size: 5.75rem;
+            line-height: .85em;
+        }
+    }
+
+    h3 {
+        color: white;
+        font-size: 1.15rem;
+        line-height: 1.25em;
+        margin-top: 1rem;
+
+        @media screen and (min-width: 1200px) {
+            font-size: 1.2rem;
+            line-height: 1.25em;
+        }
+
+        @media screen and (min-width: 1600px) {
+            font-size: 1.75rem;
+            line-height: 1.25em;
+        }
+
+    }
+
+    p {
+        color: white;
+        font-size: .85rem;
+        line-height: 1.125em;
+        margin: 0;
+
+        @media screen and (min-width: 1200px) {
+            font-size: .85rem;
+            line-height: 1.25em;
+        }
+
+        @media screen and (min-width: 1600px) {
+            font-size: 1rem;
+            line-height: 1.25em;
+        }
+    }
+
+    .infoTecnicaBox {
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+        gap: 2.5rem;
+
+        .startBox {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            gap: .5rem;
+        }
+    }
+}
+
+.buttonBox {
+    margin-top: 1.25rem;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: .5rem;
+
+    @media screen and (min-width: 1200px) {
+        margin-top: 1.75rem;
+    }
+
+    @media screen and (min-width: 1600px) {
+        margin-top: 2.5rem;
+    }
+
+    button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: .5rem;
+        color: white;
+        font-size: .9rem;
+
+        @media screen and (min-width: 1200px) {
+            font-size: 1rem;
+        }
+    }
+
+    a {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: .5rem;
+        color: white;
+        font-size: .9rem;
+
+        @media screen and (min-width: 1200px) {
+            font-size: 1rem;
+        }
+    }
+
+
+}
+
+.containerFluid {
+    padding-top: 10rem;
+    padding-left: 4vw;
+}
