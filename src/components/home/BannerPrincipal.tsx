@@ -66,7 +66,7 @@ const BannerPrincipal = () => {
             </SwiperSlide>
             <SwiperSlide>
                 <div className='bgDegradadoBg'>
-                    <Image src="/imagen.jpg" fill className={styles.imageFill} alt='' />
+                    <Image src="/banner2.png" fill className={styles.imageFill} alt='' />
                 </div>
             </SwiperSlide>
         </Swiper>

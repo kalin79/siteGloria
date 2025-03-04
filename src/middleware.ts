@@ -28,6 +28,14 @@ export async function middleware(req: NextRequest) {
     //       }
     //   }
 
+    // const requestedPage = req.nextUrl.pathname;
+    // const url = req.nextUrl.clone();
+    // url.search = requestedPage
+    // if (req.nextUrl.pathname.startsWith('/admin')) {
+    //     url.pathname = `/login`;
+    //     return NextResponse.redirect(url)
+    // }
+
     return NextResponse.next()
 
 }

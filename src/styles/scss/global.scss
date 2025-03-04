@@ -2,7 +2,81 @@
 @import "./bootstrap-custom";
 
 body {
+    background-color: $azul;
+    background-image: url('/bg.png'); // Ruta relativa en `public/`
+    background-size: cover; // Ajusta la imagen al tamaño de la pantalla
+    background-position: center; // Centra la imagen
+    background-repeat: no-repeat; // Evita que se repita
+}
+
+
+.popupVideo {
+    transform: scale(1.1);
+    position: fixed;
+    z-index: 1000;
     background: $azul;
+    border-radius: 20px;
+    overflow: hidden;
+    cursor: pointer;
+
+    .videoPlayView {
+        width: 100%;
+        border-radius: 0 0px 20px 20px;
+        position: relative;
+        overflow: hidden;
+
+        &:before {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to bottom, rgba(black, 0.15) 0%, rgba($azul, .35) 100%);
+        }
+
+        .titularDiv {
+            font-size: 1rem;
+            font-weight: 400;
+            font-family: var(--fuente-misti), sans-serif;
+            color: white;
+            position: absolute;
+            padding-right: 1rem;
+            bottom: 1rem;
+            left: 1rem;
+            line-height: 1.25em;
+        }
+
+        video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+
+
+    .videoControladorPopup {
+        background: $azul;
+
+        .controladorFlex {
+            padding: 1rem;
+            display: flex;
+
+        }
+    }
+}
+
+.listScrollVideo {
+    position: relative;
+}
+
+.containerHomeMain {
+    margin-top: -14rem;
+    position: relative;
+    z-index: 100;
+
+    @media screen and (min-width: 1200px) {
+        margin-top: -18rem;
+    }
 }
 
 .containerFluid {
@@ -12,15 +86,16 @@ body {
 .bgDegradadoBg {
     position: relative;
     height: 100%;
+    // -webkit-mask-image: linear-gradient(to top, transparent 0%, black 10%);
 
-    &::before {
-        content: '';
-        position: absolute;
-        z-index: 3;
-        width: 100%;
-        height: 100%;
-        background: linear-gradient(to bottom, rgba(black, 0.15) 0%, rgba(black, 0.15) 10%, rgba($azul, 1) 100%);
-    }
+    // &::before {
+    //     content: '';
+    //     position: absolute;
+    //     z-index: 3;
+    //     width: 100%;
+    //     height: 100%;
+    //     background: linear-gradient(to bottom, rgba(black, 0.15) 0%, rgba(black, 1) 90%, rgba($azul, 1) 100%);
+    // }
 }
 
 .misti {
@@ -29,6 +104,10 @@ body {
 
 .poppins {
     font-family: var(--fuente-poppins), sans-serif;
+}
+
+.font-extralight {
+    font-weight: 100;
 }
 
 .font-light {
@@ -105,4 +184,82 @@ button {
         background: white;
         border-radius: 4px;
     }
+
+    .swiper-pagination-fraction,
+    .swiper-pagination-custom,
+    .swiper-horizontal>.swiper-pagination-bullets,
+    .swiper-pagination-bullets.swiper-pagination-horizontal {
+        bottom: 15rem;
+
+        @media screen and (min-width: 1200px) {
+            bottom: 17rem;
+        }
+    }
+}
+
+.swiperNetflix {
+    .swiper-button-next {
+        width: 11.5rem;
+        height: 100%;
+        right: 0;
+        top: 1rem;
+
+
+        &::after {
+            color: white;
+            z-index: 1;
+        }
+
+        &::before {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to right, transparent, rgba($azul, 1) 100%);
+        }
+    }
+
+    .swiper-button-prev {
+        width: 11.5rem;
+        height: 100%;
+        left: 0;
+        top: 1rem;
+
+
+
+        &::after {
+            color: white;
+            z-index: 1;
+        }
+
+        &::before {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to left, transparent, rgba($azul, 1) 100%);
+        }
+    }
+}
+
+// Color de las marcas
+
+.color1 {
+    background: $marcaColor1 !important;
+}
+
+.color2 {
+    background: $marcaColor2 !important;
+}
+
+.color3 {
+    background: $marcaColor3 !important;
+}
+
+.color4 {
+    background: $marcaColor4 !important;
+}
+
+.color5 {
+    background: $marcaColor5 !important;
 }

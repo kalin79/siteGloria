@@ -14,3 +14,106 @@
         object-fit: cover;
     }
 }
+
+.videosHomeBox {
+    margin-top: 6rem;
+
+    h2 {
+        color: $celeste;
+        font-size: 2rem;
+        margin-bottom: 2rem;
+
+        span {
+            color: white;
+        }
+    }
+}
+
+.videoListContent {
+    // overflow: hidden;
+    // position: relative;
+    // left: 2vw;
+
+    // .listContentScroll {
+    //     position: relative;
+    //     left: 0vw;
+    // }
+
+
+    .swiperNetflix {
+        width: 100%;
+        height: 100%;
+        /* Center slide text vertically */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+
+    }
+
+    .slideNetflix {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .cardVideoBox {
+
+        width: 100%;
+        height: 100%;
+        transition: transform 0.3s ease;
+        position: relative;
+
+        .cardBody {
+            border: 1px solid rgba(white, .4);
+            border-radius: 10px;
+            overflow: hidden;
+            height: 152px;
+            position: relative;
+            cursor: pointer;
+
+            .playIcon {
+                position: absolute;
+                bottom: 1rem;
+                left: 1rem;
+                width: 34px;
+                height: 34px;
+                z-index: 10;
+            }
+
+            .videoBoxImg {
+                object-fit: cover;
+                width: 100% !important;
+                height: 100% !important;
+                position: relative !important;
+            }
+        }
+
+        .cardFooter {
+            margin-top: 1rem;
+            padding-left: 1rem;
+
+            .etiquetaCard {
+                min-width: 72px;
+                box-sizing: border-box;
+                padding: 0 .25rem;
+                border-radius: 40px;
+                display: inline-block;
+                background: $azulClaro;
+                color: white;
+                margin: 0 0 .5rem;
+                text-align: center;
+            }
+
+            h3 {
+                font-size: 1rem;
+                color: $azulMuyClaro;
+            }
+        }
+    }
+
+    // .cardVideoBox:hover {
+    //     transform: scale(1.1);
+    // }
+
+}
