@@ -1,7 +1,8 @@
 import BannerPrincipalComponent from "@/components/home/BannerPrincipal";
 import MarcasComponent from "@/components/home/Marcas";
 import VideosComponent from "@/components/home/VideosCarrusel";
-
+import VideosHoriComponent from "@/components/home/VideosCarruselHori";
+import CampanasComponent from "@/components/home/Campanas";
 export default function Home() {
     return (
         <>
@@ -9,7 +10,8 @@ export default function Home() {
             <div className="containerHomeMain">
                 <MarcasComponent />
                 <VideosComponent />
-                <VideosComponent />
+                <CampanasComponent />
+                <VideosHoriComponent />
             </div>
 
         </>

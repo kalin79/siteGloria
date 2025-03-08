@@ -18,7 +18,7 @@ interface videoParameters {
     index: number,
     videosContents: VideoContent,
 }
-const Video = ({ index, videosContents }: videoParameters) => {
+const VideoHori = ({ index, videosContents }: videoParameters) => {
     const router = useRouter();
     // Referencia al div  que contiene la informacion.
     const cardRefs = useRef<(HTMLDivElement | null)[]>([]);
@@ -163,7 +163,6 @@ const Video = ({ index, videosContents }: videoParameters) => {
             document.querySelectorAll(".popupVideo").forEach(el => el.remove());
         };
     }, []);
-
     return (
         <div
             ref={(el) => { (cardRefs.current[index] = el) }}
@@ -172,19 +171,20 @@ const Video = ({ index, videosContents }: videoParameters) => {
             onClick={() => handleClickViewVideo(videosContents.slug, videosContents.marca)}
         >
             <div className={styles.cardBody}>
-                <Image src='/play.svg' className={styles.playIcon} width={34} height={34} alt='Bonle :: Reproducir el video' />
                 <Image src={videosContents.imagen} className={styles.videoBoxImg} fill alt='Bonle :: Loncheras divertidas y nutritivas para tus pequeños' />
             </div>
             <div className={styles.cardFooter}>
+                <Image src='/play.svg' className={styles.playIcon} width={34} height={34} alt='Bonle :: Reproducir el video' />
                 <div className={`${styles.etiquetaCard} ${videosContents.colorMarca}`}>
                     {videosContents.marca}
                 </div>
                 <h3 className='mitsi font-medium'>
-                    {videosContents.title}
+                    <span>{videosContents.title}</span>
+                    <span className={`${styles.numberBox} mitsi font-bold`}>{index + 1}</span>
                 </h3>
             </div>
         </div>
     )
 }
 
-export default Video
+export default VideoHori

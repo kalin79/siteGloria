@@ -1,0 +1,99 @@
+@use 'vars/colors' as *;
+
+
+
+.campanaListContent {
+    .swiperNetflix {
+        width: 100%;
+        height: 100%;
+        /* Center slide text vertically */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .slideNetflix {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .cardCampanaRect {
+        border: 1px solid rgba(white, .4);
+        height: 180px;
+        width: 100%;
+        position: relative;
+        border-radius: 10px;
+        overflow: hidden;
+        cursor: pointer;
+
+
+        &:hover {
+            .cardBody {
+                img {
+                    transform: scale(1.15);
+                }
+            }
+
+        }
+
+        // overflow: hidden;
+        @media screen and (min-width: 1600px) {
+            height: 260px;
+        }
+
+        .cardBody {
+            width: 100%;
+            height: 100%;
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                transition: .5s ease-in-out all;
+            }
+        }
+
+        &::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(0deg, rgba(36, 36, 36, 1) 0%, rgba(29, 29, 29, 0) 75%);
+            z-index: 1;
+        }
+
+        .cardFooter {
+            position: absolute;
+            bottom: 1rem;
+            left: 1rem;
+            border: 0px solid red;
+            z-index: 2;
+
+            .playIcon {
+                width: 34px;
+                height: 34px;
+                object-fit: contain;
+                margin-bottom: .5rem;
+            }
+
+            h2 {
+                color: $celeste;
+                font-size: 12px;
+                line-height: 1em;
+            }
+
+            h3 {
+                color: $azulMuyClaro;
+                font-size: 18px;
+                line-height: 1em;
+
+                @media screen and (min-width: 1600px) {
+                    font-size: 22px;
+                }
+            }
+        }
+    }
+}

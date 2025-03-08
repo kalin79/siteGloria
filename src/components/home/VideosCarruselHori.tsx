@@ -2,7 +2,7 @@
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation } from 'swiper/modules';
 // import VideoBanner from "@/components/videos/Banner"
-import VideoComponent from "@/components/videos/Video";
+import VideoComponent from "@/components/videos/VideoHori";
 
 // Estilos swiper
 import 'swiper/css';
@@ -20,107 +20,90 @@ interface VideoContent {
     video: string;
     colorMarca: string;
 }
-const VideosCarrusel = () => {
+const VideosCarruselHori = () => {
     const videos: VideoContent[] = [
         {
-            title: 'Loncheras divertidas y nutritivas para tus pequeños',
+            title: 'Nutrición para Crecer:',
             idMarca: 1,
-            marca: 'Bonle',
-            slug: 'lonceras-divertidas-y-nutricionales-para-tus-pequenos',
-            imagen: '/videoimg.png',
+            marca: 'Gloria',
+            slug: 'nutricion-para-crecer',
+            imagen: '/videohor1.png',
             video: '/videocorto.mp4',
             colorMarca: 'color1'
         },
         {
-            title: 'Cómo potenciar el aprendizaje de tus hijos desde casa',
+            title: 'Energía en Cada Cucharada: El Poder del Yogurt y los Cereales',
             idMarca: 2,
             marca: 'ActiBio',
-            slug: 'como-potenciar-el-aprendizaje-de-tus-hijos-desde-casa',
-            imagen: '/videoimg2.png',
+            slug: 'energia-en-cada-cucharada-el-poder-del-yogurt-y-los-cereales',
+            imagen: '/videohor2.png',
             video: '/videocorto.mp4',
             colorMarca: 'color2'
         },
         {
-            title: 'Potencia tu actividad física con estos consejos PRO',
+            title: 'Ganar Masa Muscular: ¿Cómo Te Ayuda Tu Batido Energético?',
             idMarca: 3,
             marca: 'PRO',
-            slug: 'potencia-tu-actividad-fisica-con-estos-consejos-pro',
-            imagen: '/videoimg3.png',
+            slug: 'ganar-masa-muscular-¿como-te-ayuda-tu-batido-energetico',
+            imagen: '/videohor3.png',
             video: '/videocorto.mp4',
             colorMarca: 'color3'
         },
         {
-            title: 'Loncheras divertidas y nutritivas para tus pequeños',
+            title: 'Nutrición para Crecer: Los Mejores Alimentos para Cada Etapa de Tu Hijo',
             idMarca: 4,
-            marca: 'PRO',
-            slug: 'loncheras-divertidas-y-nutritivas-para-tus-pequenos',
-            imagen: '/videoimg.png',
-            video: '/videocorto.mp4',
-            colorMarca: 'color3'
-        },
-        {
-            title: 'Loncheras divertidas y nutritivas para tus pequeños',
-            idMarca: 5,
-            marca: 'Bonle',
-            slug: 'loncheras-divertidas-y-nutritivas-para-tus-pequenos',
-            imagen: '/videoimg3.png',
+            marca: 'Gloria',
+            slug: 'nutricion-para-crecer-los-mejores-alimentos-para-cada-etapa-de-tu-hijo',
+            imagen: '/videohor4.png',
             video: '/videocorto.mp4',
             colorMarca: 'color1'
         },
         {
-            title: 'Loncheras divertidas y nutritivas para tus pequeños',
+            title: 'Nutrición para Crecer:',
             idMarca: 1,
-            marca: 'Bonle',
-            slug: 'lonceras-divertidas-y-nutricionales-para-tus-pequenos',
-            imagen: '/videoimg.png',
+            marca: 'Gloria',
+            slug: 'nutricion-para-crecer',
+            imagen: '/videohor1.png',
             video: '/videocorto.mp4',
             colorMarca: 'color1'
         },
         {
-            title: 'Cómo potenciar el aprendizaje de tus hijos desde casa',
+            title: 'Energía en Cada Cucharada: El Poder del Yogurt y los Cereales',
             idMarca: 2,
             marca: 'ActiBio',
-            slug: 'como-potenciar-el-aprendizaje-de-tus-hijos-desde-casa',
-            imagen: '/videoimg2.png',
+            slug: 'energia-en-cada-cucharada-el-poder-del-yogurt-y-los-cereales',
+            imagen: '/videohor2.png',
             video: '/videocorto.mp4',
             colorMarca: 'color2'
         },
         {
-            title: 'Potencia tu actividad física con estos consejos PRO',
+            title: 'Ganar Masa Muscular: ¿Cómo Te Ayuda Tu Batido Energético?',
             idMarca: 3,
             marca: 'PRO',
-            slug: 'potencia-tu-actividad-fisica-con-estos-consejos-pro',
-            imagen: '/videoimg3.png',
+            slug: 'ganar-masa-muscular-¿como-te-ayuda-tu-batido-energetico',
+            imagen: '/videohor3.png',
             video: '/videocorto.mp4',
             colorMarca: 'color3'
         },
         {
-            title: 'Loncheras divertidas y nutritivas para tus pequeños',
+            title: 'Nutrición para Crecer: Los Mejores Alimentos para Cada Etapa de Tu Hijo',
             idMarca: 4,
-            marca: 'PRO',
-            slug: 'loncheras-divertidas-y-nutritivas-para-tus-pequenos',
-            imagen: '/videoimg.png',
-            video: '/videocorto.mp4',
-            colorMarca: 'color3'
-        },
-        {
-            title: 'Loncheras divertidas y nutritivas para tus pequeños',
-            idMarca: 5,
-            marca: 'Bonle',
-            slug: 'loncheras-divertidas-y-nutritivas-para-tus-pequenos',
-            imagen: '/videoimg2.png',
+            marca: 'Gloria',
+            slug: 'nutricion-para-crecer-los-mejores-alimentos-para-cada-etapa-de-tu-hijo',
+            imagen: '/videohor4.png',
             video: '/videocorto.mp4',
             colorMarca: 'color1'
         },
+
     ]
     return (
         <>
             <div className={`containerFluid`}>
                 <div className={`videosHomeTitularBox`}>
-                    <h2 className="mitsi  font-normal">Gloria Contigo: <span className="mitsi font-extralight">Videos que inspiran</span></h2>
+                    <h2 className="mitsi  font-normal"><span className="mitsi font-extralight">Tendencia en la </span>comunidad Gloria Contigo</h2>
                 </div>
             </div>
-            <div className={styles.videoListContent}>
+            <div className={styles.videoHoriListContent}>
                 <div className={`listScrollVideo`}>
                     <Swiper
                         spaceBetween={10}
@@ -131,13 +114,13 @@ const VideosCarrusel = () => {
                         // autoplay={{ delay: 3000 }}
                         loop={true}
                         modules={[Navigation]}
-                        className={`${styles.swiperNetflix} swiperNetflix`}
+                        className={`${styles.swiperNetflix} swiperNetflixHori`}
                         breakpoints={{
                             1024: {
-                                slidesPerView: 4
+                                slidesPerView: 5
                             },
                             1600: {
-                                slidesPerView: 6
+                                slidesPerView: 5
                             }
                         }}
 
@@ -158,4 +141,4 @@ const VideosCarrusel = () => {
     )
 }
 
-export default VideosCarrusel
+export default VideosCarruselHori

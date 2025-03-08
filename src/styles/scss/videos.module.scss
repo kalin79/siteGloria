@@ -15,16 +15,123 @@
     }
 }
 
-.videosHomeBox {
-    margin-top: 6rem;
 
-    h2 {
-        color: $celeste;
-        font-size: 2rem;
-        margin-bottom: 2rem;
+.videoHoriListContent {
+    .swiperNetflix {
+        width: 100%;
+        height: 100%;
+        /* Center slide text vertically */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
 
-        span {
-            color: white;
+    .slideNetflix {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .cardVideoBox {
+        width: 100%;
+        height: 100%;
+        transition: transform 0.3s ease;
+        position: relative;
+
+        .cardBody {
+            border: 1px solid rgba(white, .4);
+            border-radius: 10px;
+            overflow: hidden;
+            height: 420px;
+            position: relative;
+            cursor: pointer;
+
+            @media screen and (min-width: 1600px) {
+                height: 587px;
+            }
+
+            &::before {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background: linear-gradient(0deg, rgba(36, 36, 36, 1) 0%, rgba(29, 29, 29, 0) 100%);
+                z-index: 1;
+            }
+
+
+
+            .videoBoxImg {
+                object-fit: cover;
+                width: 100% !important;
+                height: 100% !important;
+                position: relative !important;
+                object-position: center;
+            }
+        }
+
+        .cardFooter {
+
+            position: absolute;
+            bottom: 1rem;
+            left: 1rem;
+            border: 0px solid red;
+            z-index: 2;
+            width: 90%;
+            padding-right: 2rem;
+
+            .playIcon {
+                width: 34px;
+                height: 34px;
+                display: block;
+                margin-bottom: 1rem;
+            }
+
+            .etiquetaCard {
+                min-width: 72px;
+                box-sizing: border-box;
+                padding: 0 .25rem;
+                border-radius: 40px;
+                display: inline-block;
+                background: $azulClaro;
+                color: white;
+                margin: 0 0 .5rem;
+                text-align: center;
+            }
+
+            h3 {
+                font-size: .85rem;
+                color: $azulMuyClaro;
+                min-height: 80px;
+                position: relative;
+
+                @media screen and (min-width: 1600px) {
+                    font-size: 1rem;
+                }
+
+
+
+                .numberBox {
+                    position: absolute;
+                    font-size: 270px;
+                    color: transparent;
+                    -webkit-text-stroke: 2px rgba($celeste, .5);
+                    top: -11.5rem;
+                    right: -2rem;
+
+                    @media screen and (min-width:1200px) {
+                        font-size: 290px;
+                        top: -12.5rem;
+                    }
+
+                    @media screen and (min-width:1600px) {
+                        font-size: 400px;
+                        top: -20.5rem;
+                    }
+                }
+            }
         }
     }
 }
