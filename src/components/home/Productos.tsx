@@ -87,6 +87,7 @@ const Productos = () => {
             imagen: '/p3.png',
             receta: true
         },
+
     ]
     const options: OptionType[] = [
         { value: "Gloria", label: "Gloria" },
@@ -132,7 +133,7 @@ const Productos = () => {
                             />
                         </div>
                         <div>
-                            <Link href={`/gloria`} className='buttonBtn' title='Ir a productos'>Ver todos los productos</Link>
+                            <Link href={`/marca/producto/gloria`} className='buttonBtn' title='Ir a productos'>Ver todos los productos</Link>
                         </div>
                     </div>
                     <div className={`${styles.bodyProducts}`}>

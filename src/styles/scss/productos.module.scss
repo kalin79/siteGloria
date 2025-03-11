@@ -4,22 +4,9 @@
 
     background: linear-gradient(to right, rgba($azul, .95), rgba($azul, .95)), url('/fondomama.png');
     background-blend-mode: multiply;
-    /* Puedes cambiar 'multiply' por otro modo */
     background-size: cover;
     background-position: center;
 
-
-    .fondoMezcla {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        background: url('/fondomama.png') no-repeat center center;
-        background-size: cover;
-        background-blend-mode: multiply;
-    }
 }
 
 .containerflex {
@@ -39,21 +26,24 @@
             }
 
             h2 {
-                font-size: 3.875rem;
+                font-size: 2.95rem;
                 color: white;
-                line-height: .9em;
+                line-height: 1.15em;
                 letter-spacing: -.05em;
+
+                @media screen and (min-width: 1600px) {
+                    font-size: 3.875rem;
+                }
 
                 span {
                     color: $celeste;
-                    line-height: 1em;
                 }
             }
 
             p {
                 font-size: 1.75rem;
                 color: white;
-                line-height: 1em;
+                line-height: 1.15em;
             }
 
             .chefContent {

@@ -4,6 +4,7 @@ import VideosComponent from "@/components/home/VideosCarrusel";
 import VideosHoriComponent from "@/components/home/VideosCarruselHori";
 import CampanasComponent from "@/components/home/Campanas";
 import ProductsComponent from "@/components/home/Productos";
+import NoticiasComponent from "@/components/home/Noticias";
 export default function Home() {
     return (
         <>
@@ -14,6 +15,7 @@ export default function Home() {
                 <CampanasComponent />
                 <VideosHoriComponent />
                 <ProductsComponent />
+                <NoticiasComponent />
             </div>
 
         </>
