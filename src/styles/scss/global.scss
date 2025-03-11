@@ -83,6 +83,10 @@ body {
     padding: 0 2vw;
 }
 
+.containerFluidLeft {
+    padding: 0 0 0 2vw;
+}
+
 .bgDegradadoBg {
     position: relative;
     height: 100%;
@@ -336,5 +340,75 @@ button {
         span {
             color: white;
         }
+    }
+}
+
+/* Cambia el fondo y el borde del input */
+.customSelectHomeProducts__control {
+    background-color: transparent !important;
+    border: 1px solid #8fd2ea;
+    color: #fff;
+    width: 295px;
+    height: 56px;
+}
+
+/* Cambia el color del placeholder */
+.customSelectHomeProducts__placeholder {
+    color: #fff;
+}
+
+/* Cambia el color del texto seleccionado */
+.customSelectHomeProducts__single-value {
+    color: #fff !important;
+}
+
+/* Estiliza las opciones del menú */
+.customSelectHomeProducts__menu {
+    background-color: transparent;
+}
+
+.customSelectHomeProducts__option {
+    color: #fff;
+    background-color: transparent;
+}
+
+.customSelectHomeProducts__option--is-selected {
+    background-color: #8fd2ea;
+    color: #fff;
+}
+
+.customSelectHomeProducts__option--is-focused {
+    background-color: #8fd2ea;
+    color: #fff;
+}
+
+.swiperScrollHorizontal {
+    &.swiper {
+        overflow-x: auto !important;
+        /* Habilita el desplazamiento horizontal */
+        scrollbar-width: thin;
+        /* Personaliza la barra de desplazamiento */
+        scrollbar-color: #8fd2ea transparent;
+    }
+
+    &
+
+    /* Personaliza la barra de desplazamiento en navegadores WebKit (Chrome, Safari) */
+    &.swiper::-webkit-scrollbar {
+        height: 5px;
+    }
+
+    &.swiper::-webkit-scrollbar-thumb {
+        background-color: #8fd2ea;
+        border-radius: 10px;
+    }
+
+    /* Ajusta el tamaño de cada slide */
+    .swiper-slide {
+        width: auto !important;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 10px;
     }
 }

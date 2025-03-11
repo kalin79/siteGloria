@@ -1,0 +1,165 @@
+@use 'vars/colors' as *;
+
+.containerFluidLeft {
+
+    background: linear-gradient(to right, rgba($azul, .95), rgba($azul, .95)), url('/fondomama.png');
+    background-blend-mode: multiply;
+    /* Puedes cambiar 'multiply' por otro modo */
+    background-size: cover;
+    background-position: center;
+
+
+    .fondoMezcla {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        background: url('/fondomama.png') no-repeat center center;
+        background-size: cover;
+        background-blend-mode: multiply;
+    }
+}
+
+.containerflex {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    padding: 10rem 0 5rem;
+
+
+    >div {
+        &:nth-child(1) {
+            grid-column: 1/4;
+
+
+            h3 {
+                font-size: 1rem;
+                color: $celeste;
+            }
+
+            h2 {
+                font-size: 3.875rem;
+                color: white;
+                line-height: .9em;
+                letter-spacing: -.05em;
+
+                span {
+                    color: $celeste;
+                    line-height: 1em;
+                }
+            }
+
+            p {
+                font-size: 1.75rem;
+                color: white;
+                line-height: 1em;
+            }
+
+            .chefContent {
+                display: flex;
+                justify-content: flex-start;
+                align-items: flex-start;
+                gap: .5rem;
+                margin-top: 2rem;
+
+                p {
+                    color: $celeste;
+                    font-size: 1rem;
+                    margin-top: .25rem;
+                    line-height: .95em;
+                }
+            }
+        }
+
+        &:nth-child(2) {
+            grid-column: 5 / -1;
+
+            .bodyProducts {
+                padding: 1.5rem 0 0;
+
+                .cardPrduct {
+                    padding-bottom: 1.8rem;
+                    position: relative;
+
+                    .recetacontent {
+                        position: absolute;
+                        top: 0;
+                        left: 1.5rem;
+                    }
+
+                    .bodyCardBox {
+                        background: white;
+                        padding: 1rem;
+                        border-radius: 10px;
+                        overflow: hidden;
+                        margin-bottom: 1.5rem;
+
+                        img {
+                            width: 400px;
+                            object-fit: contain;
+
+                            @media screen and (min-width: 1200px) {
+                                width: 280px;
+                            }
+
+                            @media screen and (min-width: 1600px) {
+                                width: 400px;
+                            }
+                        }
+                    }
+
+                    .footerCardBox {
+                        h4 {
+                            font-size: 1.25rem;
+                            color: $azulMuyClaro;
+                            text-align: center;
+                            line-height: 1em;
+                        }
+
+                        h2 {
+                            font-size: 1rem;
+                            color: $celeste;
+                            text-align: center;
+                            line-height: 1em;
+                        }
+                    }
+                }
+
+            }
+
+            .headerProducts {
+                display: flex;
+                justify-content: space-between;
+                align-items: flex-end;
+                position: relative;
+                z-index: 100;
+
+                >div {
+                    &:nth-child(1) {
+                        p {
+                            font-size: 1rem;
+                            color: white;
+                        }
+                    }
+
+                    &:nth-child(2) {
+                        padding-right: 4rem;
+
+
+
+                        a {
+                            width: 256px;
+                            height: 58px;
+                            background: linear-gradient(45deg, $morado, $morado2);
+                            color: white;
+                            border: 1px solid $morado;
+                            line-height: 3.5em;
+                        }
+                    }
+                }
+            }
+
+        }
+    }
+}

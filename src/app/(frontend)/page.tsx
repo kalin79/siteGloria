@@ -3,6 +3,7 @@ import MarcasComponent from "@/components/home/Marcas";
 import VideosComponent from "@/components/home/VideosCarrusel";
 import VideosHoriComponent from "@/components/home/VideosCarruselHori";
 import CampanasComponent from "@/components/home/Campanas";
+import ProductsComponent from "@/components/home/Productos";
 export default function Home() {
     return (
         <>
@@ -12,6 +13,7 @@ export default function Home() {
                 <VideosComponent />
                 <CampanasComponent />
                 <VideosHoriComponent />
+                <ProductsComponent />
             </div>
 
         </>
