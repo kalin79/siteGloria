@@ -96,6 +96,9 @@ const Campanas = () => {
                         modules={[Navigation]}
                         className={`${styles.swiperNetflix} swiperNetflix`}
                         breakpoints={{
+                            750: {
+                                slidesPerView: 3
+                            },
                             992: {
                                 slidesPerView: 3
                             },

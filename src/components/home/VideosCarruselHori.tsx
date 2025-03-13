@@ -116,6 +116,9 @@ const VideosCarruselHori = () => {
                         modules={[Navigation]}
                         className={`${styles.swiperNetflix} swiperNetflixHori`}
                         breakpoints={{
+                            750: {
+                                slidesPerView: 3
+                            },
                             992: {
                                 slidesPerView: 5
                             },
