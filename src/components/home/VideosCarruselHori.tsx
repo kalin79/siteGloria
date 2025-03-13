@@ -108,7 +108,7 @@ const VideosCarruselHori = () => {
                     <Swiper
                         spaceBetween={10}
                         centeredSlides={true}
-                        slidesPerView={4} // Muestra 5 películas a la vez
+                        slidesPerView={1} // Muestra 5 películas a la vez
                         navigation
                         pagination={{ clickable: true }}
                         // autoplay={{ delay: 3000 }}
@@ -116,7 +116,7 @@ const VideosCarruselHori = () => {
                         modules={[Navigation]}
                         className={`${styles.swiperNetflix} swiperNetflixHori`}
                         breakpoints={{
-                            1024: {
+                            992: {
                                 slidesPerView: 5
                             },
                             1600: {

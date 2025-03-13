@@ -70,9 +70,13 @@ body {
 }
 
 .containerHomeMain {
-    margin-top: -14rem;
+    margin-top: 0rem;
     position: relative;
     z-index: 100;
+
+    @media screen and (min-width: 992px) {
+        margin-top: -14rem;
+    }
 
     @media screen and (min-width: 1200px) {
         margin-top: -18rem;
@@ -140,11 +144,16 @@ body {
 
 button {
     width: 230px;
-    height: 62px;
+    height: 47px;
     border-radius: 80px;
     text-align: center;
     background: linear-gradient(to bottom, $morado2, $morado);
     border: 0;
+
+    @media screen and (min-width: 992px) {
+        width: 230px;
+        height: 62px;
+    }
 
     @media screen and (min-width: 1200px) {
         height: 72px;
@@ -172,9 +181,19 @@ button {
 
 .bannerCarruselHome {
 
+    .swiper-button-next,
+    .swiper-button-prev {
+        top: var(--swiper-navigation-top-offset, 43%);
+
+        @media screen and (min-width: 992px) {
+            top: var(--swiper-navigation-top-offset, 50%);
+        }
+    }
+
     .swiper-button-next::after,
     .swiper-button-prev::after {
         color: white;
+        border: 0px solid red;
     }
 
     .swiper-pagination {
@@ -193,7 +212,11 @@ button {
     .swiper-pagination-custom,
     .swiper-horizontal>.swiper-pagination-bullets,
     .swiper-pagination-bullets.swiper-pagination-horizontal {
-        bottom: 15rem;
+        bottom: 3rem;
+
+        @media screen and (min-width: 992px) {
+            bottom: 15rem;
+        }
 
         @media screen and (min-width: 1200px) {
             bottom: 17rem;
@@ -203,10 +226,14 @@ button {
 
 .swiperNetflixHori {
     .swiper-button-next {
-        width: 16.5rem;
+        width: 4.5rem;
         height: 100%;
         right: 0;
         top: 1rem;
+
+        @media screen and (min-width: 992px) {
+            width: 16.5rem;
+        }
 
         @media screen and (min-width: 1200px) {
             width: 18rem;
@@ -231,12 +258,16 @@ button {
     }
 
     .swiper-button-prev {
-        width: 16.5rem;
+        width: 4.5rem;
         height: 100%;
         left: 0;
         top: 1rem;
 
         border: 0px solid red;
+
+        @media screen and (min-width: 992px) {
+            width: 16.5rem;
+        }
 
         @media screen and (min-width: 1200px) {
             width: 18rem;
@@ -263,11 +294,14 @@ button {
 
 .swiperNetflix {
     .swiper-button-next {
-        width: 11.5rem;
+        width: 5.5rem;
         height: 100%;
         right: 0;
         top: 1rem;
 
+        @media screen and (min-width: 992px) {
+            width: 11.5rem;
+        }
 
         &::after {
             color: white;
@@ -280,15 +314,25 @@ button {
             width: 100%;
             height: 100%;
             background: linear-gradient(to right, transparent, rgba($azul, 1) 100%);
+            opacity: .65;
+
+            @media screen and (min-width: 992px) {
+                opacity: 1;
+
+            }
         }
     }
 
     .swiper-button-prev {
-        width: 11.5rem;
+        width: 5.5rem;
         height: 100%;
         left: 0;
         top: 1rem;
 
+        @media screen and (min-width: 992px) {
+            width: 11.5rem;
+            top: 1rem;
+        }
 
 
         &::after {
@@ -302,6 +346,12 @@ button {
             width: 100%;
             height: 100%;
             background: linear-gradient(to left, transparent, rgba($azul, 1) 100%);
+            opacity: .65;
+
+            @media screen and (min-width: 992px) {
+                opacity: 1;
+
+            }
         }
     }
 }
@@ -330,12 +380,20 @@ button {
 
 
 .videosHomeTitularBox {
-    margin-top: 5rem;
+    margin-top: 3rem;
+
+    @media screen and (min-width:992px) {
+        margin-top: 5rem;
+    }
 
     h2 {
         color: $celeste;
-        font-size: 2rem;
+        font-size: 1.65rem;
         margin-bottom: 2rem;
+
+        @media screen and (min-width:992px) {
+            font-size: 2rem;
+        }
 
         span {
             color: white;
@@ -423,12 +481,16 @@ input:focus {
 }
 
 .formContainer {
-    width: 85%;
+    width: 100%;
     padding: 20px;
     border-radius: 8px;
     // background: #f4f4f4;
     // box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
     text-align: center;
+
+    @media screen and (min-width: 992px) {
+        width: 85%;
+    }
 
     @media screen and (min-width: 1200px) {
         width: 500px;

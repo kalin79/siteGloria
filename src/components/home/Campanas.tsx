@@ -88,7 +88,7 @@ const Campanas = () => {
                     <Swiper
                         spaceBetween={10}
                         centeredSlides={true}
-                        slidesPerView={3} // Muestra 5 películas a la vez
+                        slidesPerView={1} // Muestra 5 películas a la vez
                         navigation
                         pagination={{ clickable: true }}
                         // autoplay={{ delay: 3000 }}
@@ -96,7 +96,7 @@ const Campanas = () => {
                         modules={[Navigation]}
                         className={`${styles.swiperNetflix} swiperNetflix`}
                         breakpoints={{
-                            1024: {
+                            992: {
                                 slidesPerView: 3
                             },
                             1600: {

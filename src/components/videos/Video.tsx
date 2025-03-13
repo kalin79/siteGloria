@@ -12,7 +12,7 @@ interface VideoContent {
     slug: string;
     imagen: string;
     video: string;
-    colorMarca: string;
+    colorMarca: string; // colorGloria
 }
 interface videoParameters {
     index: number,

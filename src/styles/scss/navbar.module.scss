@@ -76,6 +76,11 @@
 
     .searchBox {
         position: relative;
+        display: none;
+
+        @media screen and (min-width: 992px) {
+            display: block;
+        }
 
         img {
             position: absolute;

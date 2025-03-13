@@ -11,10 +11,10 @@ const Marcas = () => {
             </div>
             <div className={styles.listadoCard}>
                 <CardComponent logosrc="/gloria.svg" slug="gloria" />
-                <CardComponent logosrc="/gloriaBonle.svg" slug="gloria-bonle" />
-                <CardComponent logosrc="/pro.svg" slug="pro" />
-                <CardComponent logosrc="/actibio.svg" slug="actibio" />
-                <CardComponent logosrc="/batti.svg" slug="batti-mix" />
+                <CardComponent logosrc="/Bonle.png" slug="gloria-bonle" />
+                <CardComponent logosrc="/PRO.png" slug="pro" />
+                <CardComponent logosrc="/Actibio.png" slug="actibio" />
+                <CardComponent logosrc="/Battimix.png" slug="batti-mix" />
             </div>
         </div>
     )

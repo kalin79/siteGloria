@@ -1,6 +1,6 @@
 'use client';
 import Image from 'next/image'
-import Link from 'next/link'
+// import Link from 'next/link'
 import { Swiper, SwiperSlide } from 'swiper/react';
 // import { Navigation } from 'swiper/modules';
 // import VideoBanner from "@/components/videos/Banner"
@@ -105,7 +105,7 @@ const Productos = () => {
                 <div>
                     <h3 className='misti font-medium'>NUESTROS PRODUCTOS</h3>
                     <h2 className='misti font-light'>
-                        Explora nuestra selección de <span className='font-bold'>productos lácteos:</span>
+                        Explora nuestra selección de <span className='font-medium'>productos lácteos:</span>
                     </h2>
                     <p className='font-light misti'>
                         Nutritivos, deliciosos y perfectos para toda la familia. Desliza y encuentra tus favoritos.
@@ -132,9 +132,9 @@ const Productos = () => {
                                 classNamePrefix="customSelectHomeProducts"
                             />
                         </div>
-                        <div>
+                        {/* <div>
                             <Link href={`/marca/producto/gloria`} className='buttonBtn' title='Ir a productos'>Ver todos los productos</Link>
-                        </div>
+                        </div> */}
                     </div>
                     <div className={`${styles.bodyProducts}`}>
                         <Swiper
