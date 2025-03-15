@@ -12,6 +12,11 @@
     }
 
     @media screen and ((min-width: 1200px)) {
+        height: 730px;
+        mask-image: linear-gradient(to top, transparent 0%, $azul 70%);
+    }
+
+    @media screen and ((min-width: 1200px)) {
         height: 850px;
     }
 
