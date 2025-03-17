@@ -184,3 +184,341 @@
         }
     }
 }
+
+.centerPaginado {
+    display: flex;
+    justify-content: center;
+}
+
+.paginadoBox {
+    display: flex;
+    justify-content: flex-start;
+    gap: 1rem;
+
+    button {
+        background: transparent;
+        border: 1px solid $celeste;
+        width: auto;
+        height: 45px;
+        padding: .5rem;
+        border-radius: 0;
+        border-radius: 15px;
+        cursor: pointer;
+
+        img {
+            position: relative;
+            top: -.05rem;
+        }
+    }
+
+    .paginadoNumerado {
+        display: flex;
+        justify-content: flex-start;
+        gap: 1rem;
+
+        button {
+            color: $celeste;
+            padding: .45rem 1rem;
+            transition: .5s ease-in all;
+
+            &:hover {
+                background: $celeste;
+                color: $azul;
+            }
+        }
+    }
+}
+
+.containerflex2 {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    padding: 5rem 0 5rem;
+
+    @media screen and (min-width: 992px) {
+        padding: 5rem 0 5rem;
+
+    }
+
+    >div {
+        &:nth-child(1) {
+            grid-column: 1 / -1;
+
+            @media screen and (min-width: 768px) {
+                grid-column: 1 / span 6;
+            }
+
+            h3 {
+                font-size: 1rem;
+                color: $celeste;
+            }
+
+            h2 {
+                font-size: 1.95rem;
+                color: white;
+                line-height: 1em;
+                letter-spacing: -.05em;
+
+                @media screen and (min-width: 992px) {
+                    font-size: 2.95rem;
+                }
+
+                @media screen and (min-width: 1600px) {
+                    font-size: 3.875rem;
+                }
+
+                span {
+                    color: white;
+                }
+            }
+
+            p {
+                font-size: .85rem;
+                color: white;
+                line-height: 1.15em;
+
+                @media screen and (min-width: 992px) {
+                    font-size: 1.75rem;
+                }
+            }
+
+
+        }
+
+        &:nth-child(2) {
+            grid-column: 1 / -1;
+
+            @media screen and (min-width: 768px) {
+                grid-column: 7 / -1;
+
+            }
+
+
+
+            .bodyProducts {
+                padding: 1.5rem 0 0;
+
+                .cardPrduct {
+                    padding-bottom: 1.8rem;
+                    position: relative;
+
+                    .recetacontent {
+                        position: absolute;
+                        top: 0;
+                        left: 1.5rem;
+                    }
+
+                    .bodyCardBox {
+                        background: white;
+                        padding: 1rem;
+                        border-radius: 10px;
+                        overflow: hidden;
+                        margin-bottom: 1.5rem;
+
+                        img {
+                            width: 300px;
+                            object-fit: contain;
+
+                            @media screen and (min-width: 992px) {
+                                width: 400px;
+                            }
+
+                            @media screen and (min-width: 1200px) {
+                                width: 280px;
+                            }
+
+                            @media screen and (min-width: 1600px) {
+                                width: 400px;
+                            }
+                        }
+                    }
+
+                    .footerCardBox {
+                        h4 {
+                            font-size: 1.25rem;
+                            color: $azulMuyClaro;
+                            text-align: center;
+                            line-height: 1em;
+                        }
+
+                        h2 {
+                            font-size: 1rem;
+                            color: $celeste;
+                            text-align: center;
+                            line-height: 1em;
+                        }
+                    }
+                }
+
+            }
+
+            .headerProducts {
+                display: flex;
+                justify-content: space-between;
+                align-items: flex-end;
+                position: relative;
+                z-index: 100;
+
+                margin-top: 3rem;
+
+                @media screen and (min-width: 768px) {
+                    margin-top: 0rem;
+
+                }
+
+                >div {
+                    &:nth-child(1) {
+                        padding-top: 0rem;
+
+                        @media screen and (min-width: 992px) {
+                            padding-top: 6rem;
+                        }
+
+                        p {
+                            font-size: 1rem;
+                            color: white;
+                        }
+                    }
+
+                    .chefContent {
+                        display: flex;
+                        justify-content: flex-start;
+                        align-items: flex-start;
+                        gap: .5rem;
+                        margin-top: 1rem;
+
+                        p {
+                            color: $celeste;
+                            font-size: 1rem;
+                            margin-top: .25rem;
+                            line-height: .95em;
+                        }
+                    }
+
+                    &:nth-child(2) {
+                        padding-right: 4rem;
+
+
+
+                        a {
+                            width: 256px;
+                            height: 58px;
+                            background: linear-gradient(45deg, $morado, $morado2);
+                            color: white;
+                            border: 1px solid $morado;
+                            line-height: 3.5em;
+                        }
+                    }
+                }
+            }
+
+        }
+    }
+}
+
+.listadoProductoMarcaContainer {
+    padding-bottom: 6rem;
+
+    .viewProducts {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+        padding: 2rem 0;
+
+
+        @media screen and (min-width: 768px) {
+            grid-template-columns: repeat(3, 1fr);
+        }
+
+        .cardPrduct {
+            padding-bottom: 1.8rem;
+            position: relative;
+            cursor: pointer;
+
+            .recetacontent {
+                position: absolute;
+                top: 0;
+                left: 1.5rem;
+            }
+
+            .bodyCardBox {
+                background: white;
+                padding: 1rem;
+                border-radius: 10px;
+                overflow: hidden;
+                margin-bottom: 1.5rem;
+                display: flex;
+                justify-content: center;
+                height: 240px;
+                min-height: 250px;
+
+                @media screen and (min-width: 992px) {
+                    height: auto;
+                    min-height: 378px;
+                }
+
+                img {
+                    width: 120px;
+                    object-fit: contain;
+                    height: auto;
+
+                    @media screen and (min-width: 768px) {
+                        width: 200px;
+
+                    }
+
+                    @media screen and (min-width: 992px) {
+                        width: 300px;
+                        height: 378px;
+                    }
+
+                    @media screen and (min-width: 1200px) {
+                        width: 200px;
+                        transform: scale(1.2);
+
+                    }
+
+                    @media screen and (min-width: 1600px) {
+                        width: 400px;
+                        transform: scale(1);
+                    }
+                }
+            }
+
+            .footerCardBox {
+                h4 {
+                    font-size: 1.25rem;
+                    color: $azulMuyClaro;
+                    text-align: center;
+                    line-height: 1em;
+                }
+
+                h2 {
+                    font-size: 1rem;
+                    color: $celeste;
+                    text-align: center;
+                    line-height: 1em;
+                }
+            }
+        }
+    }
+
+
+    .filtroProductosBox {
+        border: 1px solid $celeste;
+        width: 295px;
+        height: 56px;
+        border-radius: 30px;
+        display: flex;
+        justify-content: space-between;
+        box-sizing: border-box;
+        padding: .75rem 1.5rem;
+        cursor: pointer;
+
+        p {
+            font-size: 1rem;
+            color: $celeste;
+            margin: 0;
+            line-height: 1.95em;
+        }
+    }
+}

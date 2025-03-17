@@ -4,6 +4,7 @@ import "@/styles/scss/global.scss";
 import NavBar from "@/components/navbar/NavBar"
 import localFont from "next/font/local";
 import { Poppins } from "next/font/google"
+import FooterComponent from "@/components/footer/Footer";
 // Fuente Roboto
 const misti = localFont({
   src: [
@@ -45,6 +46,7 @@ export default function RootLayout({
       <body>
         <NavBar />
         {children}
+        <FooterComponent />
       </body>
     </html>
   );

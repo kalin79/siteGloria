@@ -19,7 +19,12 @@ interface VideoContentCampana {
     video: string;
 }
 
-const Campanas = () => {
+interface campanaParameters {
+    titularCampana: string;
+    subtitularCampana: string;
+}
+
+const Campanas = ({ titularCampana, subtitularCampana }: campanaParameters) => {
     const videos: VideoContentCampana[] = [
         {
             title: 'Lo estás haciendo bien',
@@ -80,7 +85,7 @@ const Campanas = () => {
         <>
             <div className={`containerFluid`}>
                 <div className={`videosHomeTitularBox`}>
-                    <h2 className="mitsi  font-normal">Campañas Gloria: <span className="mitsi font-extralight">Videos que inspiran</span></h2>
+                    <h2 className="mitsi  font-normal">Campañas {titularCampana}: <span className="mitsi font-extralight">{subtitularCampana}</span></h2>
                 </div>
             </div>
             <div className={styles.campanaListContent}>

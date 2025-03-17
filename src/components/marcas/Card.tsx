@@ -8,7 +8,7 @@ interface LogoSrcProps {
 }
 const Card = ({ logosrc, slug }: LogoSrcProps) => {
     return (
-        <Link href={`/marca/${slug}`} className={styles.btnMarca}>
+        <Link href={`/${slug}`} className={styles.btnMarca}>
             <Image src={logosrc} width={300} height={300} alt="Gloria" />
         </Link>
     )

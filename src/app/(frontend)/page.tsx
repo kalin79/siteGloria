@@ -6,7 +6,7 @@ import CampanasComponent from "@/components/home/Campanas";
 import ProductsComponent from "@/components/home/Productos";
 import NoticiasComponent from "@/components/home/Noticias";
 import SuscribeteComponent from "@/components/suscribete/Formulario";
-import FooterComponent from "@/components/footer/Footer";
+
 export default function Home() {
     return (
         <>
@@ -14,12 +14,12 @@ export default function Home() {
             <div className="containerHomeMain">
                 <MarcasComponent />
                 <VideosComponent />
-                <CampanasComponent />
+                <CampanasComponent titularCampana="Gloria" subtitularCampana="Videos que inspiran" />
                 <VideosHoriComponent />
                 <ProductsComponent />
                 <NoticiasComponent />
                 <SuscribeteComponent />
-                <FooterComponent />
+
             </div>
 
         </>

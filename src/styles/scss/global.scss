@@ -74,6 +74,8 @@ body {
     position: relative;
     z-index: 100;
 
+
+
     @media screen and (min-width: 992px) {
         margin-top: -14rem;
     }
@@ -82,6 +84,26 @@ body {
         margin-top: -18rem;
     }
 }
+
+
+.containerInternaMain {
+    margin-top: 0rem;
+    position: relative;
+    z-index: 100;
+
+    @media screen and (min-width: 768px) {
+        margin-top: -10rem;
+    }
+
+    @media screen and (min-width: 992px) {
+        margin-top: -14rem;
+    }
+
+    @media screen and (min-width: 1200px) {
+        margin-top: -18rem;
+    }
+}
+
 
 .containerFluid {
     padding: 0 2vw;
@@ -384,6 +406,16 @@ button {
 
     @media screen and (min-width:992px) {
         margin-top: 5rem;
+    }
+
+    h3 {
+        color: $celeste;
+        font-size: .85rem;
+        text-transform: uppercase;
+
+        @media screen and (min-width:992px) {
+            font-size: 1rem;
+        }
     }
 
     h2 {
