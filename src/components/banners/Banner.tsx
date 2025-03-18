@@ -27,28 +27,33 @@ const Banner = ({ multimediaContents }: multimediaParameters) => {
                         <>
                             <div className={styles.infoVideoBox}>
                                 <div className={`containerFluid ${styles.containerFluid}`}>
-                                    <h2 className='misti font-normal' dangerouslySetInnerHTML={{ __html: multimediaContents.title }}></h2>
-                                    <h3 className='misti font-light' dangerouslySetInnerHTML={{ __html: multimediaContents.subTitle }}></h3>
-                                    <div className={styles.infoTecnicaBox}>
-                                        <div className={styles.startBox}>
-                                            <Image src="/start.svg" width={24} height={24} alt='Calificacion' />
-                                            <p className='misti font-light'>{multimediaContents.like}</p>
-                                        </div>
-                                        <div className={styles.startBox}>
-                                            <Image src="/time.svg" width={24} height={24} alt='Duracion' />
-                                            <p className='misti font-light'>Duración: {multimediaContents.duracion}</p>
+                                    <div className='gridBanner'>
+                                        <div>
+                                            <h2 className='misti font-normal' dangerouslySetInnerHTML={{ __html: multimediaContents.title }}></h2>
+                                            <h3 className='misti font-light' dangerouslySetInnerHTML={{ __html: multimediaContents.subTitle }}></h3>
+                                            <div className={styles.infoTecnicaBox}>
+                                                <div className={styles.startBox}>
+                                                    <Image src="/start.svg" width={24} height={24} alt='Calificacion' />
+                                                    <p className='misti font-light'>{multimediaContents.like}</p>
+                                                </div>
+                                                <div className={styles.startBox}>
+                                                    <Image src="/time.svg" width={24} height={24} alt='Duracion' />
+                                                    <p className='misti font-light'>Duración: {multimediaContents.duracion}</p>
+                                                </div>
+                                            </div>
+                                            <div className={styles.buttonBox}>
+                                                <button>
+                                                    <span className='poppins font-medium'>Reproducir</span>
+                                                    <Image src="/playButton.svg" width={22} height={22} alt='Play' />
+                                                </button>
+                                                <Link href={`/${multimediaContents.slugMarca}/video/${multimediaContents.slug}`} className='buttonBtn'>
+                                                    <span className='poppins font-medium'>Más información</span>
+                                                    <Image src="/info.svg" width={32} height={32} alt='Más información' />
+                                                </Link>
+                                            </div>
                                         </div>
                                     </div>
-                                    <div className={styles.buttonBox}>
-                                        <button>
-                                            <span className='poppins font-medium'>Reproducir</span>
-                                            <Image src="/playButton.svg" width={22} height={22} alt='Play' />
-                                        </button>
-                                        <Link href={`/${multimediaContents.slugMarca}/video/${multimediaContents.slug}`} className='buttonBtn'>
-                                            <span className='poppins font-medium'>Más información</span>
-                                            <Image src="/info.svg" width={32} height={32} alt='Más información' />
-                                        </Link>
-                                    </div>
+
                                 </div>
                             </div>
                             <VideoBanner />
@@ -57,14 +62,18 @@ const Banner = ({ multimediaContents }: multimediaParameters) => {
                         <>
                             <div className={styles.infoVideoBox}>
                                 <div className={`containerFluid ${styles.containerFluid}`}>
-                                    <h2 className='misti font-normal' dangerouslySetInnerHTML={{ __html: multimediaContents.title }}></h2>
-                                    <h3 className='misti font-light' dangerouslySetInnerHTML={{ __html: multimediaContents.subTitle }}></h3>
+                                    <div className='gridBanner'>
+                                        <div>
+                                            <h2 className='misti font-normal' dangerouslySetInnerHTML={{ __html: multimediaContents.title }}></h2>
+                                            <h3 className='misti font-light' dangerouslySetInnerHTML={{ __html: multimediaContents.subTitle }}></h3>
 
-                                    <div className={styles.buttonBox}>
-                                        <Link href={`/${multimediaContents.slugMarca}/video/${multimediaContents.slug}`} className='buttonBtn'>
-                                            <span className='poppins font-medium'>Más información</span>
-                                            <Image src="/info.svg" width={32} height={32} alt='Más información' />
-                                        </Link>
+                                            <div className={styles.buttonBox}>
+                                                <Link href={`/${multimediaContents.slugMarca}/video/${multimediaContents.slug}`} className='buttonBtn'>
+                                                    <span className='poppins font-medium'>Más información</span>
+                                                    <Image src="/info.svg" width={32} height={32} alt='Más información' />
+                                                </Link>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>

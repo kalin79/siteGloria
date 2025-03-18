@@ -1,8 +1,5 @@
-import BannerComponent from "@/components/banners/BannerInterno";
-import VideosComponent from "@/components/videos/Carrusel";
-import VideosFiltroComponent from "@/components/videos/CarruselMarcaFiltro";
-import CampanasComponent from "@/components/home/Campanas";
-import ListadoComponent from "@/components/productos/Listado";
+import BannerComponent from "@/components/banners/PreviewVideo";
+import TabsComponent from "@/components/videos/Tabs";
 interface BannerInternoInterface {
     title: string;
     subTitle: string;
@@ -16,9 +13,9 @@ interface BannerInternoInterface {
     like: string;
     duracion: string;
 }
-export default function Marca() {
+export default function Video() {
     const multimedia: BannerInternoInterface = {
-        title: 'Mamá que nutre, mamá en su gloria',
+        title: 'Cómo potenciar el aprendizaje de tus hijos desde casa',
         subTitle: 'Una campaña que celebra el amor y la nutrición que solo una mamá puede dar, con la calidad de Leche Gloria.',
         idMarca: 1,
         marca: 'Gloria',
@@ -33,13 +30,11 @@ export default function Marca() {
     return (
         <>
             <BannerComponent multimediaContents={multimedia} />
-            <div className="containerInternaMain">
-                <VideosComponent />
-                <VideosFiltroComponent />
-                <CampanasComponent titularCampana="Gloria" subtitularCampana="Videos que inspiran" />
-                <ListadoComponent />
+            <div className="containerInternaMain2">
+                <div className="containerFluid">
+                    <TabsComponent />
+                </div>
             </div>
-
         </>
     );
 }

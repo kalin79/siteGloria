@@ -25,8 +25,8 @@ interface BannerInterface {
 const BannerPrincipal = () => {
     const banners: BannerInterface[] = [
         {
-            title: 'Jugando para <br />aprender',
-            subTitle: 'Juegos para fortalecer el vínculo <br />con tus hijos',
+            title: 'Jugando para aprender',
+            subTitle: 'Juegos para fortalecer el vínculo con tus hijos',
             idMarca: 1,
             marca: 'Bonle',
             slugMarca: 'bonle',

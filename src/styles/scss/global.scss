@@ -86,6 +86,19 @@ body {
 }
 
 
+.gridBanner {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+
+    >div {
+        grid-column: 1 / span 6;
+
+        @media screen and (min-width: 1400px) {
+            grid-column: 1 / span 6;
+        }
+    }
+}
+
 .containerInternaMain {
     margin-top: 0rem;
     position: relative;
@@ -101,6 +114,24 @@ body {
 
     @media screen and (min-width: 1200px) {
         margin-top: -18rem;
+    }
+}
+
+.containerInternaMain2 {
+    margin-top: 0rem;
+    position: relative;
+    z-index: 100;
+
+    @media screen and (min-width: 768px) {
+        margin-top: -7rem;
+    }
+
+    @media screen and (min-width: 992px) {
+        margin-top: -6rem;
+    }
+
+    @media screen and (min-width: 1200px) {
+        margin-top: -10rem;
     }
 }
 
@@ -604,5 +635,50 @@ input:focus {
 
     .checkboxLabel {
         font-size: 14px;
+    }
+}
+
+// Modal
+.modal-dialog {
+
+    width: 100%;
+    max-width: 90%;
+
+    @media screen and (min-width: 1400px) {
+        max-width: 80%;
+    }
+
+    .modal-content {
+        background: $azul;
+        overflow: hidden;
+
+        .modal-header,
+        .modal-body,
+        .modal-footer {
+            border: 0;
+        }
+
+
+
+        .modal-body {
+            padding: 0;
+            margin: 0;
+        }
+
+        .buttonClosePopUp {
+            background: transparent;
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            width: 30px;
+            height: 30px;
+            // border-radius: 0;
+            color: white;
+            font-size: 1rem;
+            z-index: 30;
+            border: 1px solid $azul;
+            background: $azul;
+
+        }
     }
 }
