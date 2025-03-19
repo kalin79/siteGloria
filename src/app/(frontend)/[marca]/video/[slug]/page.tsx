@@ -23,7 +23,7 @@ export default function Video() {
         slugMarca: 'gloria',
         slug: 'mama-que-nutre-mama-en-su-gloria',
         type: 'video', // video o imagen
-        multimedia: 'video.mp4',
+        multimedia: '/videocorto.mp4',
         like: '8.2  |  1245',
         duracion: '23 seg',
     }

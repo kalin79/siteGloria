@@ -68,10 +68,9 @@ const Banner = ({ multimediaContents }: multimediaParameters) => {
                                             <h3 className='misti font-light' dangerouslySetInnerHTML={{ __html: multimediaContents.subTitle }}></h3>
 
                                             <div className={styles.buttonBox}>
-                                                <Link href={`/${multimediaContents.slugMarca}/video/${multimediaContents.slug}`} className='buttonBtn'>
-                                                    <span className='poppins font-medium'>Más información</span>
-                                                    <Image src="/info.svg" width={32} height={32} alt='Más información' />
-                                                </Link>
+                                                <button>
+                                                    <span className='poppins font-medium'>Ver m&aacute;s</span>
+                                                </button>
                                             </div>
                                         </div>
                                     </div>

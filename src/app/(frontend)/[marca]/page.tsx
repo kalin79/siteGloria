@@ -18,7 +18,7 @@ interface BannerInternoInterface {
 }
 export default function Marca() {
     const multimedia: BannerInternoInterface = {
-        title: 'Mamá que nutre, mamá en su gloria',
+        title: 'Mamá que <br />nutre, mamá <br />en su gloria',
         subTitle: 'Una campaña que celebra el amor y la nutrición que solo una mamá puede dar, con la calidad de Leche Gloria.',
         idMarca: 1,
         marca: 'Gloria',

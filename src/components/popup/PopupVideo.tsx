@@ -27,7 +27,7 @@ const PopupVideo = ({ isOpen, onClose, items }: PopupProps) => {
                     <button type="button" className="buttonClosePopUp" onClick={onClose}>X</button>
 
                     <div className="modal-body">
-                        <VideoBanner />
+                        <VideoBanner videoContent={items} />
                     </div>
                     {/* <div className="modal-footer">
                         <button className="btn btn-secondary" onClick={onClose}>

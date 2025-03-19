@@ -39,7 +39,7 @@ const BannerInterno = ({ multimediaContents }: multimediaParameters) => {
                                 <div className={`containerFluid ${styles.containerFluid}`}>
                                     <div className="gridBanner">
                                         <div>
-                                            <h1 className='mitsi font-normal' dangerouslySetInnerHTML={{ __html: multimediaContents.marca }}></h1>
+                                            <h1 className='mitsi font-normal' style={{ display: "none" }} dangerouslySetInnerHTML={{ __html: multimediaContents.marca }}></h1>
                                             <h2 className='mitsi font-normal' dangerouslySetInnerHTML={{ __html: multimediaContents.title }}></h2>
                                             <p className='mitsi font-normal' dangerouslySetInnerHTML={{ __html: multimediaContents.subTitle }}></p>
                                             <div className={styles.buttonBox}>
