@@ -18,15 +18,16 @@ const NavBar = () => {
         <div className={`${styles.navegationMenu}`}>
             <nav className={`${styles.navBar}`}>
                 <Link href='/'>
-                    <Image src='/logo.svg' width="160" height='126' alt='Gloria' />
+                    <Image src='/logo.svg' className={styles.logoMainBox} width="160" height='126' alt='Gloria' />
                 </Link>
                 <div className={`${styles.menuOption}`}>
-                    <div className={`${styles.searchBox}`}>
+                    {/* <div className={`${styles.searchBox}`}>
                         <Image src='/lupa.svg' width="24" height='24' alt='buscar' />
                         <input type="text" placeholder='Buscar aqui tus videos favoritos ...' />
-                    </div>
+                    </div> */}
                     <div className={`${styles.loginBox}`}>
-                        <Image src='/user.png' width="55" height='52' alt='Bienvenido :: Kalin' />
+                        <h5 className='poppins font-medium'>C</h5>
+                        {/* <Image src='/user.png' width="55" height='52' alt='Bienvenido :: Kalin' /> */}
                     </div>
                     <div className={`${styles.menuButton}`}>
                         <div></div>
