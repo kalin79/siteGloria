@@ -14,7 +14,11 @@
                 grid-column: 1 / -1;
 
                 @media screen and (min-width: 992px) {
-                    grid-column: 1 / 6;
+                    grid-column: 1 / span 6;
+                }
+
+                @media screen and (min-width: 1600px) {
+                    grid-column: 1 / span 5;
                 }
 
                 h2 {
@@ -44,6 +48,15 @@
                 @media screen and (min-width: 992px) {
                     grid-column: 7 / -1;
                     padding-top: 1rem;
+                }
+
+                @media screen and (min-width: 1400px) {
+                    grid-column: 8 / span 5;
+                    padding-top: 1rem;
+                }
+
+                @media screen and (min-width: 1600px) {
+                    grid-column: 9 / span 4;
                 }
 
                 p {

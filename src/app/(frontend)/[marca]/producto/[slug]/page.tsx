@@ -1,5 +1,7 @@
 import BannerComponent from "@/components/banners/BannerEstatico";
-import TabsComponent from "@/components/videos/Tabs";
+import DetalleComponent from "@/components/productos/DetalleProducto";
+import TabsComponent from "@/components/productos/Tabs";
+import RelacionadosComponent from "@/components/productos/Relacionados";
 interface BannerEstaticoInternoInterface {
     title: string;
     idMarca: number;
@@ -22,7 +24,9 @@ export default function Producto() {
             <BannerComponent multimediaContents={multimedia} />
             <div className="containerInternaMain2">
                 <div className="containerFluid">
+                    <DetalleComponent />
                     <TabsComponent />
+                    <RelacionadosComponent />
                 </div>
             </div>
         </>

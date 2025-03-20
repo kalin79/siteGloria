@@ -697,3 +697,79 @@ input:focus {
         }
     }
 }
+
+// estilos CMS
+
+.tableResponsiveNutricional {
+    margin-top: 2rem;
+
+    .table> :not(caption)>*>* {
+        background: transparent;
+    }
+
+    .table {
+        thead {
+            tr {
+                th {
+                    border-bottom: 1px solid $celeste;
+                    font-size: 1rem;
+                    font-family: var(--fuente-poppins), sans-serif;
+                    font-weight: 400;
+                    color: $celeste;
+                    text-align: left;
+                    padding: 1rem 1rem 0 0;
+                }
+            }
+        }
+
+        tbody {
+            tr {
+                td {
+                    border-bottom: 1px solid rgba($celeste, .2);
+                    font-size: 0.875;
+                    font-family: var(--fuente-poppins), sans-serif;
+                    font-weight: 400;
+                    color: $grisClaro;
+                    padding: 1rem 1rem 1rem 0;
+                }
+            }
+        }
+    }
+
+}
+
+.productoLineaBox {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: .5rem;
+
+    >div {
+        height: 90px;
+        width: 90px;
+
+        p {
+            color: $azulMuyClaro2 !important;
+            font-size: 0.875rem !important;
+            text-align: center !important;
+            line-height: 1.25em !important;
+            margin-top: .25rem !important;
+        }
+
+        .iconBox {
+            position: relative;
+            height: 100%;
+            width: 100%;
+
+
+
+            img {
+                width: 100%;
+                height: auto;
+                object-fit: contain;
+            }
+        }
+
+    }
+
+}
