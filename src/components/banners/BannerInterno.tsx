@@ -41,7 +41,7 @@ const BannerInterno = ({ multimediaContents }: multimediaParameters) => {
                                         <div>
                                             <h1 className='mitsi font-normal' style={{ display: "none" }} dangerouslySetInnerHTML={{ __html: multimediaContents.marca }}></h1>
                                             <h2 className='mitsi font-normal' dangerouslySetInnerHTML={{ __html: multimediaContents.title }}></h2>
-                                            <p className='mitsi font-normal' dangerouslySetInnerHTML={{ __html: multimediaContents.subTitle }}></p>
+                                            <h3 className='mitsi font-light' dangerouslySetInnerHTML={{ __html: multimediaContents.subTitle }}></h3>
                                             <div className={styles.buttonBox}>
                                                 <button
                                                     onClick={handleVideo}

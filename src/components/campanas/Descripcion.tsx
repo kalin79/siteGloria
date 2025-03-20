@@ -29,9 +29,9 @@ const Descripcion = () => {
                             </p>
                         </div>
                         <div className={styles.legalesBox}>
-                            <Link href='/'>Terminos y Condiciones</Link>
-                            <Link href='/'>Politicas de Datos</Link>
-                            <Link href='/'>Politicas de Cookies</Link>
+                            <Link href='/gloria/legales/13-terminos-condiciones'>Terminos y Condiciones</Link>
+                            <Link href='/gloria/legales/135-politica-de-datos'>Politicas de Datos</Link>
+                            <Link href='/gloria/legales/7654-politica-de-cookies'>Politicas de Cookies</Link>
                         </div>
                     </div>
                 </div>

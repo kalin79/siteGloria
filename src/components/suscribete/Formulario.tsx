@@ -52,7 +52,7 @@ const Formulario = () => {
                                             </svg>
                                         )}
                                     </span>
-                                    <span className="checkboxLabel">Acepto términos y condiciones leer <a href="/terminos-y-condiciones" target="_blank">aqu&iacute;</a></span>
+                                    <span className="checkboxLabel">Acepto términos y condiciones leer <a href="/legales/terminos-y-condiciones" target="_blank">aqu&iacute;</a></span>
                                 </label>
                             </div>
                         </form>

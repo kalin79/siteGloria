@@ -1,4 +1,5 @@
 'use client';
+
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Pagination, Autoplay, EffectFade } from 'swiper/modules';
 import BannerComponent from "@/components/banners/Banner"
@@ -10,6 +11,7 @@ import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 
 import styles from '@/styles/scss/carrusel.module.scss';
+
 interface BannerInterface {
     title: string;
     subTitle: string;
@@ -21,8 +23,10 @@ interface BannerInterface {
     multimedia: string;
     like: string;
     duracion: string;
+    logoMarca: string;
 }
 const BannerPrincipal = () => {
+
     const banners: BannerInterface[] = [
         {
             title: 'Jugando para aprender',
@@ -35,6 +39,7 @@ const BannerPrincipal = () => {
             multimedia: '/videocorto.mp4',
             like: '8.2  |  1245',
             duracion: '32 min',
+            logoMarca: 'gloria.svg',
         },
         {
             title: 'Esta es una <br />prueba',
@@ -47,32 +52,35 @@ const BannerPrincipal = () => {
             multimedia: '/banner2.png',
             like: '',
             duracion: '',
+            logoMarca: 'gloria.svg',
         },
 
     ]
 
     return (
+        <>
 
-        <Swiper
-            modules={[EffectFade, Navigation, Pagination, Autoplay]}
-            effect={'fade'}
-            spaceBetween={30}
-            slidesPerView={1}
-            navigation={true}
-            pagination={{ clickable: true }}
-            // autoplay={{ delay: 8000 }}
-            className={`${styles.bannerCarrusel} bannerCarruselHome`}
+            <Swiper
+                modules={[EffectFade, Navigation, Pagination, Autoplay]}
+                effect={'fade'}
+                spaceBetween={30}
+                slidesPerView={1}
+                navigation={true}
+                pagination={{ clickable: true }}
+                // autoplay={{ delay: 8000 }}
+                className={`${styles.bannerCarrusel} bannerCarruselHome`}
 
-        >
-            {banners.map((item, index) => (
-                <SwiperSlide
-                    key={index}
-                >
-                    <BannerComponent multimediaContents={item} />
-                </SwiperSlide>
-            ))}
+            >
+                {banners.map((item, index) => (
+                    <SwiperSlide
+                        key={index}
+                    >
+                        <BannerComponent multimediaContents={item} />
+                    </SwiperSlide>
+                ))}
 
-        </Swiper>
+            </Swiper>
+        </>
 
 
     );

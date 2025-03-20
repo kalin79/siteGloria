@@ -36,8 +36,8 @@ const Footer = () => {
                     <div>
                         <h3 className='mitsi font-medium'>Legales</h3>
                         <div className={styles.listLink}>
-                            <Link href="/terminos-y-condiciones">T&eacute;rminos y Condiciones</Link>
-                            <Link href="/politicias-de-proteccion-de-datos">Politicias de Protecci&oacute;n de Datos</Link>
+                            <Link href="/legales/terminos-y-condiciones">T&eacute;rminos y Condiciones</Link>
+                            <Link href="/legales/politicias-de-proteccion-de-datos">Politicias de Protecci&oacute;n de Datos</Link>
                         </div>
                     </div>
                     <div>

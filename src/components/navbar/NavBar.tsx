@@ -1,7 +1,8 @@
-
+'use client';
 import Image from 'next/image'
 import Link from 'next/link'
-
+import { useEffect } from "react";
+import gsap from "gsap";
 import styles from '@/styles/scss/navbar.module.scss';
 
 // import { Poppins } from 'next/font/google'
@@ -14,8 +15,21 @@ import styles from '@/styles/scss/navbar.module.scss';
 
 
 const NavBar = () => {
+    useEffect(() => {
+        const handleScroll = () => {
+            if (window.scrollY > 150) {
+                gsap.to(".navegationMenu", { backgroundColor: "rgba(26, 23, 43,0.85) ", duration: 0.3 });
+            } else {
+                gsap.to(".navegationMenu", { backgroundColor: "transparent", duration: 0.3 });
+            }
+        };
+
+        window.addEventListener("scroll", handleScroll);
+        return () => window.removeEventListener("scroll", handleScroll);
+    }, []);
+
     return (
-        <div className={`${styles.navegationMenu}`}>
+        <div className={`${styles.navegationMenu} navegationMenu`}>
             <nav className={`${styles.navBar}`}>
                 <Link href='/'>
                     <Image src='/logo.svg' className={styles.logoMainBox} width="160" height='126' alt='Gloria' />

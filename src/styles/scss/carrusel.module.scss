@@ -149,6 +149,25 @@
                 align-items: center;
                 gap: .5rem;
             }
+
+            p {
+                color: white;
+                font-size: .95rem;
+                line-height: 1.125em;
+                margin: 0;
+
+
+
+                @media screen and (min-width: 1200px) {
+                    font-size: .95rem;
+                    line-height: 1.25em;
+                }
+
+                @media screen and (min-width: 1600px) {
+                    font-size: 1rem;
+                    line-height: 1.25em;
+                }
+            }
         }
     }
 }
