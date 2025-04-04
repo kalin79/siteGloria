@@ -124,22 +124,13 @@ const VideosCarrusel = () => {
     // Referencia al div  que contiene la informacion.
     const cardRefs = useRef<(HTMLDivElement | null)[]>([]);
 
-    // Estado para almacenar las coodenadas
-
-    // const [hoverPosition, setHoverPosition] = useState<{ top: number, left: number } | null>(null)
-
-    // Timeout para el debouncing
-
-    // const hoverTimeout = useRef<NodeJS.Timeout | null>(null)
-
-    // Funcion para manejar el evento de hover con debouncing
-
     const handleMouseEnter = (index: number, slug: string, marca: string, title: string, video: string) => {
         const card = cardRefs.current[index];
 
         console.log("card", card);
         console.log("isAnimating", isAnimating);
         console.log("tlCard.isActive", tlCard.isActive);
+        console.log(tlCard.isActive());
 
         // solo animamos sino existe otra animacion activa 
         if (!tlCard.isActive() && !isAnimating) {
@@ -148,36 +139,18 @@ const VideosCarrusel = () => {
             if (card) {
                 const rect = card.getBoundingClientRect();
                 console.log(rect);
+                document.querySelectorAll(".popupVideo").forEach(el => el.remove());
                 mostrarPopUp(rect.top + window.scrollY, rect.left + window.scrollX, rect.width, rect.height, slug, marca, title, video);
             } else {
                 isAnimating = false;
             }
 
+        } else {
+            if ((document.querySelector(".popupVideo")) && !tlCard.isActive()) {
+                isAnimating = false;
+                document.querySelectorAll(".popupVideo").forEach(el => el.remove());
+            }
         }
-
-
-
-
-
-
-        // limpiar el timeout anterior si existe
-
-        // if (hoverTimeout.current) {
-        //     clearTimeout(hoverTimeout.current);
-        // }
-
-        // // Establecer un nuevo timeout
-
-        // hoverTimeout.current = setTimeout(() => {
-        //     const card = cardRefs.current[index];
-        //     if (card) {
-        //         // Obtener las coordenadas del div usando getBoundingClientRect()
-        //         const rect = card.getBoundingClientRect();
-        //         console.log(rect);
-        //         mostrarPopUp(rect.top + window.scrollY, rect.left + window.scrollX, rect.width, rect.height, slug, marca, title, video);
-
-        //     }
-        // }, 200)
 
     }
 
@@ -207,31 +180,6 @@ const VideosCarrusel = () => {
         }
 
 
-
-        // if (hoverTimeout.current) {
-        //     clearTimeout(hoverTimeout.current)
-
-
-        // }
-
-        // if (divRemove) {
-        //     // divRemove.remove()
-        //     gsap.to(divRemove, {
-        //         scale: 0, // Escala inicial (0 = completamente pequeño)
-        //         opacity: 0, // Opacidad inicial (0 = completamente transparente)
-        //         duration: 0.5, // Duración de la animación
-        //         ease: "power2.out", // Curva de easing
-        //         onComplete: () => divRemove.remove()
-        //     });
-
-        // }
-
-
-
-
-
-        // setHoverPosition(null);
-
     }
 
     const handleClickViewVideo = (slug: string, marca: string) => {
@@ -240,7 +188,7 @@ const VideosCarrusel = () => {
 
     const mostrarPopUp = (top: number, left: number, width: number, height: number, slug: string, marca: string, title: string, video: string) => {
         console.log(top, left);
-        document.querySelectorAll(".popupVideo").forEach(el => el.remove());
+
         const divContenedorVideo = document.createElement("div");
         const divVideo = document.createElement("div");
         const divControles = document.createElement("div");
