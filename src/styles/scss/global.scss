@@ -12,7 +12,7 @@ body {
 
 .popupVideo {
     transform: scale(1.1);
-    position: fixed;
+    position: absolute;
     z-index: 1000;
     background: $azul;
     border-radius: 20px;

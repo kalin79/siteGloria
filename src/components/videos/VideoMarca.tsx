@@ -50,7 +50,7 @@ const VideoMarca = ({ index, videosContents }: videoParameters) => {
                 // Obtener las coordenadas del div usando getBoundingClientRect()
                 const rect = card.getBoundingClientRect();
                 console.log(rect);
-                mostrarPopUp(rect.top, rect.left, rect.width, rect.height, slug, marca, title, video);
+                mostrarPopUp(rect.top + window.scrollY, rect.left + window.scrollX, rect.width, rect.height, slug, marca, title, video);
 
             }
         }, 200)

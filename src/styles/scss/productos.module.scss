@@ -198,12 +198,15 @@
     button {
         background: transparent;
         border: 1px solid $celeste;
-        width: auto;
+        width: 36px;
         height: 45px;
         padding: .5rem;
         border-radius: 0;
         border-radius: 15px;
         cursor: pointer;
+        min-width: auto;
+
+
 
         img {
             position: relative;
@@ -220,6 +223,7 @@
             color: $celeste;
             padding: .45rem 1rem;
             transition: .5s ease-in all;
+            width: 48px;
 
             &:hover {
                 background: $celeste;
@@ -643,7 +647,7 @@
                             }
 
                             @media screen and (min-width: 1200px) {
-                                font-size: 2.5rem;
+                                font-size: 2.0rem;
                                 line-height: .85em;
                             }
 
