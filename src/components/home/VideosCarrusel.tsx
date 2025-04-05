@@ -127,18 +127,12 @@ const VideosCarrusel = () => {
     const handleMouseEnter = (index: number, slug: string, marca: string, title: string, video: string) => {
         const card = cardRefs.current[index];
 
-        console.log("card", card);
-        console.log("isAnimating", isAnimating);
-        console.log("tlCard.isActive", tlCard.isActive);
-        console.log(tlCard.isActive());
-
         // solo animamos sino existe otra animacion activa 
         if (!tlCard.isActive() && !isAnimating) {
             isAnimating = true; //bloqueamos nuevas animaciones
             tlCard.clear(); // limpiar animaciones previas
             if (card) {
                 const rect = card.getBoundingClientRect();
-                console.log(rect);
                 document.querySelectorAll(".popupVideo").forEach(el => el.remove());
                 mostrarPopUp(rect.top + window.scrollY, rect.left + window.scrollX, rect.width, rect.height, slug, marca, title, video);
             } else {
@@ -154,14 +148,9 @@ const VideosCarrusel = () => {
 
     }
 
-
-
     const handleMouseLeave = () => {
 
         const divRemove = document.querySelector(".popupVideo");
-        console.log("//////sale////////");
-        console.log("isAnimating", isAnimating);
-        console.log("tlCard.isActive", tlCard.isActive);
         if (divRemove) {
             if (!tlCard.isActive() && isAnimating) {
                 tlCard.clear();
@@ -187,7 +176,6 @@ const VideosCarrusel = () => {
     }
 
     const mostrarPopUp = (top: number, left: number, width: number, height: number, slug: string, marca: string, title: string, video: string) => {
-        console.log(top, left);
 
         const divContenedorVideo = document.createElement("div");
         const divVideo = document.createElement("div");
