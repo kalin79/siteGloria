@@ -35,6 +35,7 @@ const poppins = Poppins({
 export const metadata: Metadata = {
   title: "Gloria",
   description: "Este es el sitio Web de Gloria",
+  viewport: "width=device-width, initial-scale=1",
 };
 
 export default function RootLayout({
