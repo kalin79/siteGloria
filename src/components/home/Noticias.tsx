@@ -1,5 +1,6 @@
 'use client';
 import Link from 'next/link'
+import { useRouter } from "next/navigation";
 
 import { Swiper, SwiperSlide } from 'swiper/react';
 import CardComponent from "@/components/noticias/Card";
@@ -15,6 +16,7 @@ interface NoticiaInterface {
     imagen: string;
 }
 const Noticias = () => {
+    const router = useRouter();
     const noticias: NoticiaInterface[] = [
         {
             title: 'Ganadería: orgullo y unidad familiar que perdura en el tiempo.',
@@ -48,8 +50,11 @@ const Noticias = () => {
         },
 
     ]
+    const handleClickViewVideo = (slug: string) => {
+        router.push(`/noticias/${slug}`)
+    }
     return (
-        <div className={`containerFluidLeft`}>
+        <div className={`containerFluidLeft bgAzul2`}>
             <div className={styles.blogHomeContent}>
                 <div className={styles.blogHeader}>
                     <h2 className='misti font-light'>
@@ -75,7 +80,10 @@ const Noticias = () => {
                                 style={{ width: "auto" }}
                                 key={index}
                             >
-                                <CardComponent noticiaContents={item} />
+                                <CardComponent
+                                    noticiaContents={item}
+                                    onClick={() => handleClickViewVideo(item.slug)}
+                                />
                             </SwiperSlide>
                         ))}
                     </Swiper>

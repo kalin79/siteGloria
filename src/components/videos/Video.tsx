@@ -5,6 +5,7 @@ import Image from 'next/image'
 import LikeIcon from '@/svg/like2.svg';
 import ClockIcon from '@/svg/clock.svg';
 import styles from '@/styles/scss/videos.module.scss';
+
 interface VideoContent {
     title: string;
     idMarca: number;

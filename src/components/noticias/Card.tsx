@@ -1,6 +1,5 @@
 'use client';
 import Image from 'next/image'
-import { useRouter } from "next/navigation";
 import styles from '@/styles/scss/noticias.module.scss';
 interface NoticiaInterface {
     title: string;
@@ -10,22 +9,25 @@ interface NoticiaInterface {
 
 interface noticiasParameters {
     noticiaContents: NoticiaInterface,
+    onClick: (event: React.MouseEvent<HTMLDivElement>) => void,
 }
 
-const Card = ({ noticiaContents }: noticiasParameters) => {
-    const router = useRouter();
-    const handleClickViewVideo = (slug: string) => {
-        router.push(`/noticias/${slug}`)
-    }
+const Card = ({ noticiaContents, onClick }: noticiasParameters) => {
     return (
         <div
             className={styles.cardNoticia}
-            onClick={() => handleClickViewVideo(noticiaContents.slug)}
+            onClick={onClick}
         >
-            <Image src={noticiaContents.imagen} fill alt='' />
-            <p className='mitsi font-normal '>
-                {noticiaContents.title}
-            </p>
+            <Image src={noticiaContents.imagen} className={styles.imgContainer} fill alt='' />
+            <div className={styles.footerCard}>
+                <p className='mitsi font-normal '>
+                    {noticiaContents.title}
+                </p>
+                <div className={styles.btnNoticia}>
+                    <Image src="btnmas.svg" width={32} height={32} alt="Ver mas" />
+                </div>
+            </div>
+
         </div>
     )
 }

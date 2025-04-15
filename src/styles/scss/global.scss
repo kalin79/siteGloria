@@ -9,6 +9,21 @@ body {
     background-repeat: no-repeat; // Evita que se repita
 }
 
+.bgAzul2 {
+    background-image: url('/bgAzul2.webp'); // Ruta relativa en `public/`
+    background-size: cover; // Ajusta la imagen al tamaño de la pantalla
+    background-position: top top; // Centra la imagen
+    background-repeat: no-repeat; // Evita que se repita
+}
+
+.h1Oculto {
+    position: absolute;
+    left: -9999px;
+    top: auto;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+}
 
 .popupVideo {
     transform: scale(1.1);

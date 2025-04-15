@@ -1,6 +1,5 @@
 'use client';
 import Image from 'next/image'
-import { useRouter } from "next/navigation";
 
 import styles from '@/styles/scss/productos.module.scss';
 interface ProductContent {
@@ -14,16 +13,15 @@ interface ProductContent {
 }
 interface productParameters {
     productContents: ProductContent,
+    onClick: (event: React.MouseEvent<HTMLDivElement>) => void,
 }
-const Card = ({ productContents }: productParameters) => {
-    const router = useRouter();
-    const handleClickViewVideo = (slug: string, marca: string) => {
-        router.push(`/${marca}/producto/${slug}`)
-    }
+const Card = ({ productContents, onClick }: productParameters) => {
+
+
     return (
         <div
             className={styles.cardPrduct}
-            onClick={() => handleClickViewVideo(productContents.slug, productContents.marca)}
+            onClick={onClick}
         >
             {
                 (productContents.receta) && (

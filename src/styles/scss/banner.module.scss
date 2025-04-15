@@ -1,5 +1,76 @@
 @use 'vars/colors' as *;
 
+.bannerLecherosContainer {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 1rem;
+
+    >div {
+        &:nth-child(1) {
+            display: none;
+
+            @media screen and (min-width: 768px) {
+                grid-column: 1 / span 7;
+                position: relative;
+                display: block;
+            }
+
+            img {
+                position: absolute;
+                width: 110%;
+                height: 100%;
+                object-fit: cover;
+                left: -2vw;
+                top: 0;
+                clip-path: ellipse(87.64% 161.40% at 0.5% 50%);
+            }
+        }
+
+        &:nth-child(2) {
+            grid-column: 1 / -1;
+            padding: 3rem 0 6rem;
+
+            @media screen and (min-width: 768px) {
+                grid-column: 8 / -1;
+            }
+
+            p {
+                font-size: 1.125rem;
+                line-height: 1.5em;
+                color: white;
+            }
+
+            .buttonBox {
+                margin-top: 2rem;
+
+                .buttonBtn {
+                    background: linear-gradient(45deg, rgb(97, 71, 143), rgb(130, 94, 191));
+                    border: 1px solid rgb(97, 71, 143);
+                    color: white;
+                    display: block;
+                    width: 182px;
+                    height: 58px;
+                    line-height: 3.5em;
+                    margin-right: 4rem;
+                    cursor: pointer;
+                }
+            }
+
+            .titluarGanadero {
+                h2 {
+                    font-size: 3.25rem;
+                    line-height: 1em;
+                    color: white;
+
+                    span {
+                        color: $celeste;
+                    }
+                }
+            }
+        }
+    }
+}
+
 .BannerInternoContainer {
     position: relative;
     width: 100vw;

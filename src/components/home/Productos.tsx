@@ -1,6 +1,7 @@
 'use client';
 import Image from 'next/image'
-// import Link from 'next/link'
+import { useRouter } from "next/navigation";
+
 import { Swiper, SwiperSlide } from 'swiper/react';
 // import { Navigation } from 'swiper/modules';
 // import VideoBanner from "@/components/videos/Banner"
@@ -32,6 +33,7 @@ interface ProductContent {
 }
 
 const Productos = () => {
+    const router = useRouter();
     const products: ProductContent[] = [
         {
             title: 'Leche Gloria UHT Entera',
@@ -99,6 +101,9 @@ const Productos = () => {
     const handleChange = (selectedOption: OptionType | null) => {
         console.log("Selected:", selectedOption);
     };
+    const handleClickViewVideo = (slug: string, marca: string) => {
+        router.push(`/${marca}/producto/${slug}`)
+    }
     return (
         <div className={`containerFluidLeft ${styles.containerFluidLeft}`}>
             <div className={`${styles.containerflex}`}>
@@ -150,7 +155,10 @@ const Productos = () => {
                                     style={{ width: "auto" }}
                                     key={index}
                                 >
-                                    <CardComponent productContents={item} />
+                                    <CardComponent
+                                        productContents={item}
+                                        onClick={() => handleClickViewVideo(item.slug, item.marca)}
+                                    />
                                 </SwiperSlide>
                             ))}
 

@@ -39,9 +39,19 @@ const BannerInterno = ({ multimediaContents }: multimediaParameters) => {
                                 <div className={`containerFluid ${styles.containerFluid}`}>
                                     <div className="gridBanner">
                                         <div>
-                                            <h1 className='mitsi font-normal' style={{ display: "none" }} dangerouslySetInnerHTML={{ __html: multimediaContents.marca }}></h1>
+                                            <h1 className='mitsi font-normal h1Oculto' dangerouslySetInnerHTML={{ __html: multimediaContents.marca }}></h1>
                                             <h2 className='mitsi font-normal' dangerouslySetInnerHTML={{ __html: multimediaContents.title }}></h2>
                                             <h3 className='mitsi font-light' dangerouslySetInnerHTML={{ __html: multimediaContents.subTitle }}></h3>
+                                            <div className={styles.infoTecnicaBox}>
+                                                <div className={styles.startBox}>
+                                                    <Image src="/start.svg" width={24} height={24} alt='Calificacion' />
+                                                    <p className='misti font-light'>{multimediaContents.like}</p>
+                                                </div>
+                                                <div className={styles.startBox}>
+                                                    <Image src="/time.svg" width={24} height={24} alt='Duracion' />
+                                                    <p className='misti font-light'>Duración: {multimediaContents.duracion}</p>
+                                                </div>
+                                            </div>
                                             <div className={styles.buttonBox}>
                                                 <button
                                                     onClick={handleVideo}

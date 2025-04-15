@@ -1,4 +1,6 @@
 'use client';
+import { useRouter } from "next/navigation";
+
 import { Swiper, SwiperSlide } from 'swiper/react';
 import CardComponent from "@/components/productos/Card";
 import styles from '@/styles/scss/productos.module.scss';
@@ -16,6 +18,7 @@ interface ProductContent {
     receta: boolean;
 }
 const Relacionados = () => {
+    const router = useRouter();
     const products: ProductContent[] = [
         {
             title: 'Leche Gloria UHT Entera',
@@ -73,6 +76,9 @@ const Relacionados = () => {
         },
 
     ]
+    const handleClickViewVideo = (slug: string, marca: string) => {
+        router.push(`/${marca}/producto/${slug}`)
+    }
     return (
         <div className={styles.productosRelacionadosContainer}>
             <h2 className='mitsi font-light'>
@@ -97,7 +103,11 @@ const Relacionados = () => {
                                 style={{ width: "auto" }}
                                 key={index}
                             >
-                                <CardComponent key={index} productContents={item} />
+                                <CardComponent
+                                    key={index}
+                                    productContents={item}
+                                    onClick={() => handleClickViewVideo(item.slug, item.marca)}
+                                />
 
                             </SwiperSlide>
                         ))}

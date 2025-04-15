@@ -1,4 +1,5 @@
 'use client';
+import { useRouter } from "next/navigation";
 import Image from 'next/image';
 import CardComponent from "@/components/productos/Card";
 import styles from '@/styles/scss/productos.module.scss';
@@ -12,6 +13,7 @@ interface ProductContent {
     receta: boolean;
 }
 const Listado = () => {
+    const router = useRouter();
     const products: ProductContent[] = [
         {
             title: 'Leche Gloria UHT Entera',
@@ -69,6 +71,9 @@ const Listado = () => {
         },
 
     ]
+    const handleClickViewVideo = (slug: string, marca: string) => {
+        router.push(`/${marca}/producto/${slug}`)
+    }
     return (
         <div className={`containerFluid `}>
             <div className={`${styles.containerflex2}`}>
@@ -108,7 +113,11 @@ const Listado = () => {
                 </div>
                 <div className={styles.viewProducts}>
                     {products.map((item, index) => (
-                        <CardComponent key={index} productContents={item} />
+                        <CardComponent
+                            key={index}
+                            productContents={item}
+                            onClick={() => handleClickViewVideo(item.slug, item.marca)}
+                        />
                     ))}
                 </div>
                 <div className={styles.centerPaginado}>

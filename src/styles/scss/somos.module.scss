@@ -1,0 +1,146 @@
+@use 'vars/colors' as *;
+
+.propositoContainer {
+    position: relative;
+    background: $crema;
+    padding: 5rem 0;
+
+    .botonBox {
+        margin-top: 2rem;
+        display: flex;
+        justify-content: center;
+
+        @media screen and (min-width: 992px) {
+            justify-content: flex-start;
+        }
+
+        a {
+            width: 243px;
+            height: 66px;
+            background: linear-gradient(45deg, $morado, $morado2);
+            color: white;
+            border: 1px solid $morado;
+            line-height: 4.05em;
+            display: block;
+            text-align: center;
+            text-decoration: none;
+            border-radius: 30px;
+            font-size: 1rem;
+            font-family: var(--fuente-poppins), sans-serif;
+            font-weight: 500;
+        }
+    }
+
+    .imgContainer {
+        display: none;
+
+        @media screen and (min-width: 992px) {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            width: 650px;
+            height: auto;
+            object-fit: contain;
+            display: block;
+        }
+
+        @media screen and (min-width: 1200px) {
+            width: 700px;
+        }
+    }
+
+    .gridContainer {
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        gap: 1rem;
+
+        >div {
+            &:first-child {
+                grid-column: 1 / -1;
+
+                @media screen and (min-width: 992px) {
+                    grid-column: 1 / span 6;
+
+                }
+
+                @media screen and (min-width: 1600px) {
+                    grid-column: 1 / span 5;
+                }
+
+                .listadoBox {
+                    margin-top: 3rem;
+
+                    >div {
+                        display: flex;
+                        justify-content: flex-start;
+                        align-items: flex-start;
+                        gap: 2rem;
+                        margin-bottom: 1rem;
+
+                        .infoBox {
+                            flex: 1;
+                            padding-top: .5rem;
+                        }
+
+                        .iconBox {
+                            width: 112px;
+                            height: 112px;
+                            background: $violetaOscuro;
+                            border-radius: 20px;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            flex-direction: column;
+
+                            img {
+                                width: auto;
+                                height: auto;
+                                object-fit: contain;
+                            }
+                        }
+                    }
+                }
+
+                h4 {
+                    font-size: 1.5rem;
+                    color: $violetaOscuro;
+                    font-display: var(--fuente-misti), sans-serif;
+                    font-weight: 500;
+                    margin: 0 0 0.25rem 0;
+                }
+
+                h3 {
+                    color: $rojo;
+                    font-size: 1rem;
+
+                }
+
+                h2 {
+                    font-size: 2.86rem;
+                    color: $violetaOscuro;
+                    line-height: 1em;
+
+                    @media screen and (min-width: 768px) {
+                        font-size: 3.21rem;
+                    }
+
+                    br {
+                        display: none;
+
+                        @media screen and (min-width: 768px) {
+                            display: block;
+                        }
+                    }
+                }
+
+                p {
+                    font-size: 1.125rem;
+                    color: $violetaOscuro;
+                    line-height: 1.25em;
+                    font-display: var(--fuente-misti), sans-serif;
+                    font-weight: 400;
+                }
+            }
+        }
+    }
+}
