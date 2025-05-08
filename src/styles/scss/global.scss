@@ -631,39 +631,41 @@ input:focus {
         font-size: 14px;
     }
 
-    /* Estilización del checkbox */
-    .customCheckbox {
-        display: flex;
-        align-items: center;
-        cursor: pointer;
-        margin-top: 10px;
-    }
 
-    .customCheckbox input {
-        display: none;
-    }
+}
 
-    .checkboxBox {
-        width: 20px;
-        height: 20px;
-        border: 2px solid $morado;
-        border-radius: 4px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-size: 14px;
-        margin-right: 8px;
-        transition: background 0.2s;
-    }
+/* Estilización del checkbox */
+.customCheckbox {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    margin-top: 10px;
+}
 
-    .customCheckbox input:checked+.checkboxBox {
-        background: $morado;
-        color: white;
-    }
+.customCheckbox input {
+    display: none;
+}
 
-    .checkboxLabel {
-        font-size: 14px;
-    }
+.checkboxBox {
+    width: 20px;
+    height: 20px;
+    border: 2px solid $morado;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    margin-right: 8px;
+    transition: background 0.2s;
+}
+
+.customCheckbox input:checked+.checkboxBox {
+    background: $morado;
+    color: white;
+}
+
+.checkboxLabel {
+    font-size: 14px;
 }
 
 // Modal
@@ -742,7 +744,7 @@ input:focus {
             tr {
                 td {
                     border-bottom: 1px solid rgba($celeste, .2);
-                    font-size: 0.875;
+                    font-size: 0.875rem;
                     font-family: var(--fuente-poppins), sans-serif;
                     font-weight: 400;
                     color: $grisClaro;
@@ -788,4 +790,17 @@ input:focus {
 
     }
 
+}
+
+.alert-danger {
+    margin: 1rem 0;
+
+    p {
+        margin: 0 !important;
+        font-size: 0.875rem !important;
+        font-family: var(--fuente-poppins), sans-serif !important;
+        font-weight: 400 !important;
+        color: $azul !important;
+        text-align: center !important;
+    }
 }

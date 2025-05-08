@@ -9,6 +9,37 @@
     // background: rgba($azul, .95);
 }
 
+.buttonLogin {
+    width: 60px;
+    height: 54px;
+    background: linear-gradient(to bottom, $morado2, $morado);
+    border-radius: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: .5rem;
+    text-decoration: none;
+
+    @media screen and (min-width: 768px) {
+        width: 190px;
+    }
+
+    @media screen and (min-width: 1200px) {
+        width: 190px;
+        height: 54px;
+    }
+
+    span {
+        font-size: 0.875rem;
+        color: white;
+        display: none;
+
+        @media screen and (min-width: 768px) {
+            display: inline-block;
+        }
+    }
+}
+
 .viewMenuContainer {
     position: fixed;
     top: 0rem;

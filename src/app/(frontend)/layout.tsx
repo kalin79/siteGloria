@@ -1,4 +1,6 @@
+
 import type { Metadata } from "next";
+import SessionAuthProvider from '@/context/SessionAuthProvider'
 import 'bootstrap/dist/css/bootstrap.min.css'; // Importa el CSS de Bootstrap
 import "@/styles/scss/global.scss";
 import NavBar from "@/components/navbar/NavBar"
@@ -46,10 +48,12 @@ export default function RootLayout({
   return (
     <html lang="es" className={`${misti.variable} ${poppins.variable}`}>
       <body>
-        <NavBar />
-        {children}
-        <SuscribeteComponent />
-        <FooterComponent />
+        <SessionAuthProvider>
+          <NavBar />
+          {children}
+          <SuscribeteComponent />
+          <FooterComponent />
+        </SessionAuthProvider>
       </body>
     </html>
   );

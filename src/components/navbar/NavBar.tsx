@@ -1,6 +1,7 @@
 'use client';
 import { useEffect, useState, useRef } from "react";
-
+// import { signOut, useSession } from "next-auth/react";
+import { useSession } from "next-auth/react";
 import Image from 'next/image'
 import Link from 'next/link'
 import gsap from "gsap";
@@ -10,6 +11,8 @@ const NavBar = () => {
     const [isMenuCooporativo, setIsMenuCoorporativo] = useState(false)
     const [isMenuMarcas, setIsMenuMarcas] = useState(false)
     const miDivRefMenu = useRef(null);
+    const { data: session } = useSession();
+    // onClick={() => signOut()}
     const handleCloseMenu = () => {
         const tlMenu = gsap.timeline();
         tlMenu.to(miDivRefMenu.current, {
@@ -51,14 +54,22 @@ const NavBar = () => {
                         <Image src='/logo.svg' className={styles.logoMainBox} width="160" height='126' alt='Gloria' />
                     </Link>
                     <div className={`${styles.menuOption}`}>
-                        {/* <div className={`${styles.searchBox}`}>
-                        <Image src='/lupa.svg' width="24" height='24' alt='buscar' />
-                        <input type="text" placeholder='Buscar aqui tus videos favoritos ...' />
-                    </div> */}
-                        <div className={`${styles.loginBox}`}>
-                            <h5 className='poppins font-medium'>C</h5>
-                            {/* <Image src='/user.png' width="55" height='52' alt='Bienvenido :: Kalin' /> */}
-                        </div>
+                        {
+                            (session) ? (
+                                <>
+                                    <div className={`${styles.loginBox}`}>
+                                        <h5 className='poppins font-medium'>{session?.user?.name && session.user.name.length > 0 ? session.user.name.charAt(0) : ""}</h5>
+                                    </div>
+                                </>
+                            ) : (
+                                <>
+                                    <Link href="/auth/login" className={`${styles.buttonLogin} `}>
+                                        <Image src="/btnlogin.svg" width={18} height={18} alt="login" />
+                                        <span className="poppins">Iniciar sesión</span>
+                                    </Link>
+                                </>
+                            )
+                        }
                         <div className={`${styles.menuButton}`} onClick={handleViewMenu}>
                             <div></div>
                             <div></div>

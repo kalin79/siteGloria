@@ -264,6 +264,7 @@ const VideosCarrusel = () => {
                         centeredSlides={true}
                         slidesPerView={1} // Muestra 5 películas a la vez
                         navigation
+                        grabCursor={true}
                         pagination={{ clickable: true }}
                         // autoplay={{ delay: 3000 }}
                         loop={true}
